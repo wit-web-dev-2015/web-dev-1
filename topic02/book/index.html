@@ -1,22 +1,23 @@
  <!DOCTYPE html>
  <html>
    <head>
-
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+   
+     <title> Lab-02 </title>
+   
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-     <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
+     <link rel="stylesheet" href="./style/semantic/semantic.min.css" type="text/css">
+     <script src="./style/custom/jquery-2.1.0.min.js"></script> 
+     <script src="./style/custom/jquery.address-1.6.min.js"></script>
+     <script src="./style/semantic/semantic.min.js"></script>
+   
+     <link rel="stylesheet" href="./style/highlight/solarized_light.css">
+     <script src="./style/highlight/highlight.pack.js"></script> 
      <script>hljs.initHighlightingOnLoad();</script>
 
-      <style>
+    <style>
 
 
 body 
@@ -24,100 +25,131 @@ body
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
 }
 
-figcaption
+#container
 {
-  margin-bottom: 20px;
+  margin :10px
 }
-
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-.credits
-{
-  min-height:20px;
-}
-    </style>
-
-  </head>
-
-  <body>
-
-    <div class="container">
-<style>
-
 
 code
 {
-  font-family: "Monaco";
-  font-size: 110%;
+	font-family: "Monaco";
+	font-size: 110%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
-}
-
-h1
+h1 
 {
   font-style:italic;
-  font-size:130%;
+  font-size:120%;
   border-bottom: thin solid black;
 }
-h2
+h2 
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
-h3
+h3 
 {
   font-size:100%;
   border-bottom: thin solid black;
 }
 
-</style>
+#footertext 
+{
+  font-size:70%
+}
 
-<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-      <div class="navbar-brand">
-        <a onclick="window.history.back()" href="#"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
-        Introducing CSS
-      </div>
+#title 
+{
+  font-size:120%;
+  color: black;
+  text-align: right;
+  background-color : white;
+}
+
+img 
+{
+   padding:1px;
+   border:1px solid black;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+header img
+{
+	 padding:1px;
+   border:0px solid black;
+}
+
+header h1
+{
+  font-style:normal;
+  font-size:120%;
+  border-bottom: 0px;
+}
+
+header h2
+{
+  font-style:normal;
+  font-size:100%;
+  border-bottom: 0px;
+}
+
+header h3
+{
+  font-style:normal;
+  font-size:90%;
+  border-bottom: 0px;
+}
+
+.cover
+{
+    width: 290px;
+    height: 290px;
+    border:1px solid lightgray;
+}
+.image-thumbnail
+{
+    height: 100%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+}
+
+#container .card .description {
+  min-height: 200px;
+}
+
+    </style>
+
+  </head>
+  <body>
+  <nav class="ui fixed top pointing borderless inverted menu">
+    <header class="header item"> <a href="../index.html">Introducing CSS</a></header>
+    <div class="right tab-menu menu">
+          <a class="item" data-tab="Lab-02"> Lab-02 </a>
+          <a class="item" data-tab="01"> 01 </a>
+          <a class="item" data-tab="02"> 02 </a>
+          <a class="item" data-tab="03"> 03 </a>
+          <a class="item" data-tab="04"> 04 </a>
+          <a class="item" data-tab="05"> 05 </a>
+          <a class="item" data-tab="06"> 06 </a>
+          <a class="item" data-tab="07"> 07 </a>
+          <a class="item" data-tab="08"> 08 </a>
+          <a class="item" data-tab="09"> 09 </a>
+          <a class="item" data-tab="10"> 10 </a>
+          <a class="item" data-tab="Exercises"> Exercises </a>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href= "#Lab-02" data-toggle="tab"> Lab-02 </a> </li>
-          <li><a href= "#01" data-toggle="tab"> 01 </a> </li>
-          <li><a href= "#02" data-toggle="tab"> 02 </a> </li>
-          <li><a href= "#03" data-toggle="tab"> 03 </a> </li>
-          <li><a href= "#04" data-toggle="tab"> 04 </a> </li>
-          <li><a href= "#05" data-toggle="tab"> 05 </a> </li>
-          <li><a href= "#06" data-toggle="tab"> 06 </a> </li>
-          <li><a href= "#07" data-toggle="tab"> 07 </a> </li>
-          <li><a href= "#08" data-toggle="tab"> 08 </a> </li>
-          <li><a href= "#09" data-toggle="tab"> 09 </a> </li>
-          <li><a href= "#10" data-toggle="tab"> 10 </a> </li>
-          <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
-      </ul>
-    </div>
-  </div>
-</div>
+  </nav>
 
-<br><br>
+  <br>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="Lab-02">
-    <h1>Objectives</h1>
+	  <section data-tab="Lab-02" class="ui tab stacked moodle-book segment">
+	     <h1>Objectives</h1>
 <p>In this lab we will begin a new project which will have CSS stylesheet from the beginning. We will explore some of the basic features of CSS, including colours, font and interesting techniques for setting styles across entire sections of a page.</p>
-  </div>
-
-    <div class="tab-pane fade" id="01">
-      <h1>Setup</h1>
+	  </section>
+	  <section data-tab="01" class="ui tab stacked moodle-book segment">
+	     <h1>Setup</h1>
 <h2>Files for Lab02</h2>
 <p>For some of the labs, we would like to build on a foundation established from the previous weeks work. However, we might find it useful to keep the project separate, so the earlier labs are preserved as we left them (in case we wish to revert to them). Normally this would be the task of a revision control system such as git or subversion. For the moment we will just duplicate the projects</p>
 <p>You should have the files created from last week. If you do then make a copy of the Lab1 folder and name the new copy Lab2.</p>
@@ -184,9 +216,9 @@ If we are viewing the kingKong web page stored in the movies folder, does that f
 </code></pre>
 
 <p>On the movies.html page add a link to the kingKong.html page. Test the link to make sure you have written the path correctly.</p>
-    </div>
-    <div class="tab-pane fade" id="02">
-      <h1>CSS Inheritance</h1>
+	  </section>
+	  <section data-tab="02" class="ui tab stacked moodle-book segment">
+	     <h1>CSS Inheritance</h1>
 <p>Currently our CSS file looks like this:</p>
 <pre><code class="css">h1, h2
 {
@@ -238,9 +270,9 @@ h1
 </code></pre>
 
 <p>Have a close look at the resultant page. What type of font is used by the headings? What type for the paragraphs? Can you explain the difference? Comment out the body font rule again (as we did above). What is the effect?</p>
-    </div>
-    <div class="tab-pane fade" id="03">
-      <h1>CSS Classes</h1>
+	  </section>
+	  <section data-tab="03" class="ui tab stacked moodle-book segment">
+	     <h1>CSS Classes</h1>
 <p>Open the kingKong.html file.</p>
 <p>How would we style each paragraph separately so that the year of the film, the genre, and the ratings had a different colour text? Styling the <code>&lt;p&gt;</code> element means that all <code>&lt;p&gt;</code> elements are styled in the same way. We can define a class of elements, and then apply styles to any element that belongs to that class.</p>
 <p>Go to the first paragraph which holds the year. This text we want to display as red. Add an attribute called class, with an id "special" to the <code>&lt;p&gt;</code> element as below:</p>
@@ -321,9 +353,9 @@ p
   color: red;
 }
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="04">
-      <h1>Fonts</h1>
+	  </section>
+	  <section data-tab="04" class="ui tab stacked moodle-book segment">
+	     <h1>Fonts</h1>
 <h3>Font families</h3>
 <p>Each font family contains a set of fonts that share common characteristics. There are five font familys: sans-serif, serif, monospace, cursive, and fantasy. Each family includes a large set of fonts. Fonts are not consistently available from one computer to another. The available fonts depends on the operating system as well as the fonts and applications that a user has installed. Here's a an example of how to use font-family:</p>
 <pre><code class="css">body
@@ -407,9 +439,9 @@ h2
 </code></pre>
 
 <p>Experiment with changing the headings for the web site so that the bold is changed to normal weight. Add the rule to your CSS file and reload the web site. Once you have seen the difference in the headings, change it back to bold.</p>
-    </div>
-    <div class="tab-pane fade" id="05">
-      <h1>Colours</h1>
+	  </section>
+	  <section data-tab="05" class="ui tab stacked moodle-book segment">
+	     <h1>Colours</h1>
 <p>Web colours are specified in terms of how much red, green, and blue make up the colour. You specify the amount of each colour from 0 to 100% and then add them all together to arrive at a final colour.</p>
 <p>You can use the names of colours, but CSS defines the names of only 17 colours. That number limits the expressiveness of your pages. By specifying colours in red, green and blue, you can have access to sixteen million colours.</p>
 <h2>Specifying Colour using colour names</h2>
@@ -445,9 +477,9 @@ h2
 </code></pre>
 
 <p>Try out these colours on the web site.</p>
-    </div>
-    <div class="tab-pane fade" id="06">
-      <h1>Font &amp; Colour CSS</h1>
+	  </section>
+	  <section data-tab="06" class="ui tab stacked moodle-book segment">
+	     <h1>Font &amp; Colour CSS</h1>
 <p>In your current style.css, change your CSS file so it now contains the following:</p>
 <pre><code class="css">body
 {
@@ -492,9 +524,9 @@ p
 
 <p>This property allows us to specify the line height between each line. Like other font-related properties, you can specify the height in pixels, or using an em or percentage value that's relative to the font size. Save your CSS file and reload your web pages to see the change.</p>
 <p>Try a few different line heights like 200%, .5em, and 20px to see the effect. Change the height back to 1.6em when you are finished.</p>
-    </div>
-    <div class="tab-pane fade" id="07">
-      <h1>More Content</h1>
+	  </section>
+	  <section data-tab="07" class="ui tab stacked moodle-book segment">
+	     <h1>More Content</h1>
 <p>We will rework the apps.html  page with some more content to illustrate some interesting CSS rules. Replace the first paragraph with the following content:</p>
 <pre><code class="html">  &lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
@@ -524,7 +556,7 @@ p
 
 <p>The above content relies on a number of new image files:</p>
 <hr>
-<p><img alt="" src="./img/star30.gif"></p>
+<p><img alt="" src="./img/star35.gif"></p>
 <hr>
 <p><img alt="" src="./img/star40.gif"></p>
 <hr>
@@ -533,10 +565,10 @@ p
 <p>Save these three files to your computer. To do this, right click on each one in turn and select save as. Then you can drag and drop them directly into the images folder in your eclipse project.</p>
 <p>If all this goes according to plan,  index page should now look something like this:</p>
 <p><img alt="" src="./img/07.png"></p>
-    </div>
-    <div class="tab-pane fade" id="08">
-      <h1>Returns Paragraph</h1>
-<p>Locate the first list element for the most popular apps:</p>
+	  </section>
+	  <section data-tab="08" class="ui tab stacked moodle-book segment">
+	     <h1>Popular Apps</h1>
+<p>On the apps.html page locate the first list element for the most popular apps:</p>
 <pre><code class="html"> &lt;li&gt;&lt;img src=&quot;images/lightening.jpg&quot;/&gt;Strike I OGD  &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;&lt;/li&gt;
 </code></pre>
 
@@ -555,94 +587,79 @@ p
 </code></pre>
 
 <p>Reload and review the paragraph:</p>
-<p><img alt="" src="./img/02.png"></p>
+<p><img alt="" src="./img/06.png"></p>
 <p>We can see evidence of our targeted styles.</p>
 <p>We can add a little margin:</p>
-<pre><code class="css">.returns
+<pre><code class="css">.app
 {
   /* as before */
   margin: 30px;
 }
 </code></pre>
 
-<p>Reload the page:</p>
-<p><img alt="" src="./img/03.png"></p>
 <p>Next, the background image. Save this image here to your images folder:</p>
-<p><img alt="" src="./img/background.gif"></p>
-<p>...and we can extend the returns rule with this property here:</p>
-<pre><code class="css">  background-image: url(images/background.gif) ;
+<p><img alt="" src="./img/popular.jpg"></p>
+<p>...and we can extend the app rule with this property here:</p>
+<pre><code class="css">  background-image: url(images/popular.jpg) ;
 </code></pre>
 
 <p>This seems to yield a repeated pattern:</p>
-<p><img alt="" src="./img/04.png"></p>
+<p><img alt="" src="./img/10.png"></p>
 <p>Some further refinements can put a single image in the top right:</p>
 <pre><code class="css">  background-repeat: no-repeat;
   background-position: top-left;
-</code></pre>
-
-<p>Reloading again:</p>
-<p><img alt="" src="./img/05.png"></p>
-<p>And we can also further refine the padding:</p>
-<pre><code class="css">  padding: 25px;
+  padding: 25px;
   padding-left: 80px;
   margin-right: 150px;
 </code></pre>
 
 <p>Looks like this:</p>
-<p><img alt="" src="./img/06.png"></p>
-<p>Our full rule for returns now looks like this:</p>
-<pre><code class="css">.returns
+<p><img alt="" src="./img/08.png"></p>
+<p>Our full rule for app now looks like this:</p>
+<pre><code class="css">.app
 {
-  border-color: black;
+  border-color: white;
   border-width: 1px;
   border-style: solid;
-  background-color: #a7cece;
+  background-color: white;
 
   margin: 30px;
+
+  background-image: url(images/popular.jpg);
+  background-repeat: no-repeat;
+  background-position: top-right;
+
   padding: 25px;
   padding-left: 80px;
   margin-right: 150px;
-
-  background-image: url(./images/background.gif);
-
-  background-repeat: no-repeat;
-  background-position: top-left;
 }
 </code></pre>
 
-<p>Some further adjustments to the text itself:</p>
+<p>Clearly it doesn't look that good at the moment but you can see how buidling up rules will gradually improve how the page looks.
+Some further adjustments to the text itself will help:</p>
 <pre><code class="css">  line-height: 1.9em;
   font-style: italic;
   font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
   color: black;
 </code></pre>
 
-<p>-</p>
-<p><img alt="" src="./img/07.png"></p>
-<p>Finally, we might adjust the border itself again:</p>
-<pre><code class="css">  border-color: white;
-  border-width: 1px;
-  border-style: dashed;
-</code></pre>
-
-<p>Which turns out as:</p>
-<p><img alt="" src="./img/08.png"></p>
-<p>Regrouping the properties, this is the complete rule:</p>
-<pre><code class="css">.returns
+<p>Regrouping the properties so they look like this:</p>
+<pre><code class="css">.app
 {
   border-color: white;
   border-width: 1px;
-  border-style: dashed;
+  border-style: solid;
+
 
   margin: 30px;
   padding: 25px;
   padding-left: 80px;
   margin-right: 150px;
 
-  background-color: #a7cece;
-  background-image: url(./images/background.gif);
+  background-color: white;
+  background-image: url(images/popular.jpg);
   background-repeat: no-repeat;
-  background-position: top-left;
+  background-position: top-right;
 
   line-height: 1.9em;
   font-style: italic;
@@ -650,75 +667,67 @@ p
   color: black;
 }
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="09">
-      <h1>Configuring Eclipse</h1>
-<p>Our challenge now is to make adjustments to move and entire set of content into its own 'panel', which we wish to move to the right hand side of our page. Achieving this effect here:</p>
-<p><img alt="" src="./img/x14.png"></p>
-<p>This will involve more significant surgery on the page itself in particular we will need to superimpose a structure on the page, grouping a whole set of elements into a new section.</p>
-<p>This section we call a 'Division' facilitated by the <code>&lt;div&gt;</code> tag.</p>
-<p>Before we introduce this, however, we should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
+	  </section>
+	  <section data-tab="09" class="ui tab stacked moodle-book segment">
+	     <h1>Coding Best Practices</h1>
+<p>We should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
 <p>Indentation is simply a consistent placement of spaces before each element, such that it flows in an ordered manner reflecting the opening/closing of tags. We prefer to use 2 spaces for each 'level'.</p>
 <h3>Example Inconsistent indentation:</h3>
-<pre><code class="html">    &lt;p&gt;
-    We have the biggest selection of DVDs and Games in Ireland.
-    Check out our &lt;a href=&quot;catalogue/newreleases.html&quot;&gt;new releases&lt;/a&gt;,
-    This week we reccomend &lt;em&gt;the Crazies&lt;/em&gt;.  &lt;/p&gt;
-&lt;h2&gt;Directions&lt;/h2&gt;
-  &lt;p&gt;     You'll find us right in the center
-      of downtown Webville. If you need help finding
-      us, check out our
-      &lt;a href=&quot;about/directions.html&quot;&gt;detailed directions&lt;/a&gt;.
-      Come join us
- &lt;/p&gt;
+<pre><code class="html">   &lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;APP Store&lt;/title&gt; &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score: Apps, Movies, Music, Books
+    &lt;/h1&gt;&lt;ol&gt; &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;    &lt;/ol&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+    &lt;ul&gt;      &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;    &lt;/ul&gt;
+     &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
 <h3>Example Correct indentation</h3>
-<pre><code class="html">    &lt;p&gt;
-      We have the biggest selection of DVDs and Games in Ireland.
-      Check out our &lt;a href=&quot;catalogue/newreleases.html&quot;&gt;new releases&lt;/a&gt;,
-      This week we reccomend &lt;em&gt;the Crazies&lt;/em&gt;.  
-    &lt;/p&gt;
-    &lt;h2&gt;Directions&lt;/h2&gt;
-    &lt;p&gt;
-      You'll find us right in the center
-      of downtown Webville. If you need help finding
-      us, check out our
-      &lt;a href=&quot;about/directions.html&quot;&gt;detailed directions&lt;/a&gt;.
-      Come join us
-    &lt;/p&gt;
+<pre><code class="html">&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score: Apps, Movies, Music, Books&lt;/h1&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+      &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<p>Review your index.html file not and ensure that it is correctly indented. One quick way to determine this is to 'fold' all the elements in the editor. To do this, right click in the left hand margin of the html editor and select 'Folding-&gt;Collapse All':</p>
-<p><img alt="" src="./img/10.png"></p>
+<p>Review your index.html file and ensure that it is correctly indented. One quick way to determine this is to 'fold' all the elements in the editor. To do this, hover the mouse beside the numbers listed in the left hand margin, downward arrows will appear. By clicking on the arrows the code will expand and collapse.</p>
 <p>This will reduce your editing view to this:</p>
 <p><img alt="" src="./img/11.png"></p>
-<p>and by selectively expanding elements, you should be able to generate a view like this:</p>
-<p><img alt="" src="./img/x08.png"></p>
-<p>It is likely that your indentation will not look like the above, so take the opportunity now to line up all elements consistently. This can be tedious, and there are tools to do this automatically, but do it manually for the moment.</p>
-<p>This mode of editing will allow us to clearly mark a 'division', indent it, and encapsulate it in the <code>&lt;div&gt;</code> tag. Once completed, we can give this division an ID, and target it with a rule to style just this panel appropriately.</p>
-<p>Before making this adjustment, however, we need to make one small change to the default Eclipse settings. By default, eclipse uses 'tabs' for indentation. We would like to change this to spaces 2 per indentation level.</p>
-<p>Select 'Window-&gt;Preferences' and change the setting under 'Web-&gt;HTML Files-&gt;Editor' as shown here:</p>
+<p>It is likely that your indentation will not look like the below, so take the opportunity now to line up all elements consistently. This can be tedious, and there are tools to do this automatically, but do it manually for the moment.</p>
+<p><img alt="" src="./img/12.png"></p>
+	  </section>
+	  <section data-tab="10" class="ui tab stacked moodle-book segment">
+	     <h1>App card</h1>
+<p>Our challenge now is to make adjustments to the main panel on the index.html page that contains content relating to the New Games. We wish to move the panel to the right hand side of our page. Achieving this effect here:</p>
+<p><img alt="" src="./img/17.png"></p>
+<p>This will involve more significant surgery on the page itself in particular we will need to superimpose a structure on the page, grouping a whole set of elements into a new section.</p>
+<p>This section we call a 'Division' facilitated by the <code>&lt;div&gt;</code> tag. Add this div element to your apps.html page now.</p>
 <p><img alt="" src="./img/13.png"></p>
-<p>This adjustment make the task of introducing our <code>&lt;div&gt;</code> significantly easier, all the time maintaining our correct indentation level.</p>
-<p>Now, select the "You may have missed" section:</p>
-<p><img alt="" src="./img/x09.png"></p>
-<p>... and press 'tab' once. This should indent this region by 2 spaces:</p>
-<p><img alt="" src="./img/x10.png"></p>
-<p>Now insert the new <code>&lt;div&gt;</code> element to encapsulate this region:</p>
-<p><img alt="" src="./img/x12.png"></p>
-<p>No give the <code>&lt;div&gt;</code> you have just introduced an id:</p>
-<pre><code class="html">    &lt;div id=&quot;releases&quot;&gt;
-      &lt;h2&gt;You May Have Missed ...&lt;/h2&gt;
-      ...
-</code></pre>
-
-<p>the folding editor is a little temperamental, and can loose structural information easily. So, to restore reliably restore a correct view, close and reopen the editor (making sure to save the file), and you should be able to generate a consistent view.</p>
-    </div>
-    <div class="tab-pane fade" id="10">
-      <h1>Sidebar</h1>
-<p>We can now target this division directly with the following rule in the CSS:</p>
-<pre><code class="css">#releases
+<p>Note that once you introduce the div tag around the h2 and ul content you must ensure you maintain correct indentation.</p>
+<p>Once you have placed the div in your html file you can now target this division directly with the following rule in the CSS:</p>
+<pre><code class="css">.main_panel
 {
   border-width: thin;
   border-style: solid;
@@ -727,13 +736,13 @@ p
 </code></pre>
 
 <p>This establishes a suitable border (reload to see the effect). Now lets set the width:</p>
-<pre><code class="css">  width: 15,0px;
+<pre><code class="css">  width: 700px;
 </code></pre>
 
 <p>And lets further set the general dimensions:</p>
 <pre><code class="css">  padding-right: 20px;  
   padding-left: 20px;
-  padding-bottom 20px;
+  padding-bottom: 20px;
 </code></pre>
 
 <p>Set a margin:</p>
@@ -745,19 +754,20 @@ p
 </code></pre>
 
 <p>Our full rule is now:</p>
-<pre><code class="css">#releases
+<pre><code class="css">.main_panel
 {
   border-width: thin;
   border-style: solid;
   border-color: #007e7e;
+  width: 700px;
 
-  width: 150px;
   padding-right: 20px;  
   padding-left: 20px;
-  padding-bottom 20px;
-  margin-left: 20px;
+  padding-bottom: 20px;
 
   text-align: center;
+  margin-left: 20px;
+
 }
 </code></pre>
 
@@ -768,7 +778,7 @@ p
 </code></pre>
 
 <p>with</p>
-<pre><code class="css">  padding: 0px 20px 30px 10px
+<pre><code class="css">  padding: 0px 20px 30px 10px;
 </code></pre>
 
 <p>Now add one more property to the same rule:</p>
@@ -776,27 +786,29 @@ p
 </code></pre>
 
 <p>Reload in browser view. This time something interesting happens the entire panel may 'float' to the right of the browser window:</p>
-<p><img alt="" src="./img/x20.png"></p>
 <p>The actual appearance may vary depending on the browser window size.</p>
-<p>Although this is promising, it is not quite what we were expecting. The 'releases' panel has floated left of the 'Directions' area, but is still below the main content of the home page. However, some small adjustments can realign the entire page.</p>
-<p>First, we introduce a new division to encapsulate the main content of the home page:</p>
-<p><img alt="" src="./img/x13.png"></p>
-<p>it is called 'maincontent'. Then we introduce a rule in the CSS to target this area:</p>
-<pre><code>#maincontent
+<p>We still need to make some small adjustments so that our content is correctly aligned.</p>
+<p>First, we introduce a new division to encapsulate the navigation links of the home page:</p>
+<p><img alt="" src="./img/15.png"></p>
+<p>it is called 'navigation'. Then we introduce a rule in the CSS to target this area:</p>
+<pre><code>.navigation
 {
   float:left;
   width:800px;
 }
 </code></pre>
 
-<p>Although by no means complete yet with the 'directions' still liable to 'pop-out' unpredictably, it is possible that the page might look like this:</p>
-<p><img alt="" src="./img/x14.png"></p>
+<p><img alt="" src="./img/16.png"></p>
+<p>Although by no means complete particularly with the New Games showing on the right of the page.
+Your page should look like this:</p>
+<p><img alt="" src="./img/17.png"></p>
 <p>This is the complete stylesheet:</p>
 <pre><code class="css">body
 {
   font-family: Verdana, Helvetica, Arial, sans-serif;
   font-size:small;
   line-height: 1.6em;
+  background-color: silver;
 }
 
 h1, h2
@@ -818,45 +830,49 @@ p
 {
  color: maroon;
 }
+.special
+{
+  color: red;
+}
+.main_panel
+{
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  width: 700px;
 
-.returns
+  padding: 0px 20px 30px 10px;
+
+  text-align: center;
+  margin-left: 20px;
+
+  float: right;
+
+}
+
+.app
 {
   border-color: white;
   border-width: 1px;
-  border-style: dashed;
+  border-style: solid;
 
+  width: 100px;
   margin: 30px;
   padding: 25px;
   padding-left: 80px;
   margin-right: 150px;
 
-  background-color: #a7cece;
-  background-image: url(./images/background.gif);
+  background-color: white;
+  background-image: url(images/popular.jpg);
   background-repeat: no-repeat;
-  background-position: top-left;
+  background-position: top-right;
 
   line-height: 1.9em;
   font-style: italic;
   font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
   color: black;
 }
-
-#releases
-{
-  border-width: thin;
-  border-style: solid;
-  border-color: #007e7e;
-
-  width: 150px;
-  padding: 0px 20px 30px 10px
-  margin-left: 20px;
-
-  text-align: center;
-
-  float:right;
-}
-
-#maincontent
+.navigation
 {
   float:left;
   width:800px;
@@ -864,81 +880,34 @@ p
 </code></pre>
 
 <p>...and this is the complete index.html:</p>
-<pre><code class="html">&lt;html&gt;
+<pre><code class="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;My DVD Shop&lt;/title&gt;
-        &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+    &lt;title&gt;APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;div id=&quot;maincontent&quot;&gt;
-      &lt;h1&gt;Welcome to the New and Improved DVD Shop&lt;/h1&gt;
-      &lt;img src=&quot;images/moviebanner.png&quot;&gt;
-      &lt;p&gt;
-        We have the biggest selection of DVDs and Games in Ireland.  
-        Check out our &lt;a href=&quot;catalogue/newreleases.html&quot;&gt;new releases&lt;/a&gt;,
-        This week we recommend &lt;em&gt;the Crazies&lt;/em&gt;.  
-        From our extensive catalog of DVDs and Games you choose and priortise the DVDs
-        you most want to see or Games you want to play. We have an advanced search facility
-        available for our users to search through our huge catalog of stock.
-        We stock a wide variety for movies from &lt;em&gt;Manga to Music and Comedy to Childrens,
-        Games from Puzzles to Beat'em Up and Party to Action/Adventure&lt;/em&gt; as well as all the
-        latest new releases.
-      &lt;/p&gt;
-      &lt;p&gt;
-        We endeavour to give you your most wanted DVD and/or Game from your rental
-        queue depending on our stock situation. All DVDs and Games are posted out at noon
-        FIRST CLASS, and should be at your doorstep by the next morning.
-        When we dispatch your DVD/Game we'll send you an e-mail to advise you on which
-        DVD/Game was dispatched to you. There are no late fees so you can watch or play at your leisure
-      &lt;/p&gt;
-      &lt;p class=&quot;returns&quot;&gt;
-      Once you finish watching your DVD or playing your Game you simply return it to us
-      using the Pre-Paid envelope provided.
-      Remember, As there are NO LATE FEEs, you can keep the DVD or Game for as long as you want,
-      only the sooner you return the disc, the sooner we can send you your next available choice.
-    &lt;/p&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;
+    &lt;div class=&quot;navigation&quot;&gt;
+      &lt;h1&gt;Score: Apps, Movies, Music, Books&lt;/h1&gt;
+      &lt;ol&gt;
+        &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
+      &lt;/ol&gt;
     &lt;/div&gt;
-    &lt;div id=&quot;releases&quot;&gt;
-      &lt;h2&gt;You May Have Missed ...&lt;/h2&gt;
-      &lt;p&gt;
-        &lt;img src=&quot;./images/argo.jpg&quot;&gt;
-      &lt;/p&gt;
-      &lt;h3&gt;Argo&lt;/h3&gt;  
-      &lt;p&gt;
-        &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-        Based on real events, the dramatic thriller &quot;Argo&quot; chronicles the life-or-death covert operation
-        to rescue six Americans, which unfolded behind the scenes of the Iran hostage crisis,
-        focusing on the little-known role that the CIA and Hollywood played-information that was not
-        declassified until many years after the event.
-      &lt;/p&gt;
-      &lt;p&gt;
-        &lt;img src=&quot;./images/skyfall.jpg&quot;&gt;
-      &lt;/p&gt;
-      &lt;h3&gt;Skyfall&lt;/h3&gt;
-      &lt;p&gt;
-        &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-      Bond's loyalty to M is tested as her past comes back to haunt her. As MI6 comes under attack,
-      007 must track down and destroy the threat, no matter how personal the cost.
-    &lt;/p&gt;
-    &lt;/div&gt;
-    &lt;h2&gt;Directions&lt;/h2&gt;
-    &lt;p&gt;
-      You'll find us right in the center
-      of downtown Webville. If you need help finding
-      us, check out our
-      &lt;a href=&quot;about/directions.html&quot;&gt;detailed directions&lt;/a&gt;.
-      Come join us
-    &lt;/p&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+        &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+        &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;
+      &lt;/ul&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="Exercises">
-      <h1>Exercises</h1>
+	  </section>
+	  <section data-tab="Exercises" class="ui tab stacked moodle-book segment">
+	     <h1>Exercises</h1>
 <h2>Solution</h2>
 <p>This is a solution to the lab:</p>
 <ul>
@@ -959,45 +928,68 @@ p
 </ul>
 <p>Where you are using Classes in this lab, try switching to using IDs</p>
 <h2>Exercise 2</h2>
-<p>You might consider improving the look at feed of the directions page using the CSS features we have just covered. For instance:</p>
+<p>You might consider improving the look of the home and the apps pages using the CSS features we have just covered. For instance:</p>
 <ul>
 <li>
-<p>Use and unordered list (<code>&lt;ol&gt;</code>) instead of a series of paragraphs for each of the directions.</p>
+<p>Create a division on the home page which will contain the <code>&lt;h1</code>&gt; Score: Apps, Music, Books </p>
 </li>
 <li>
-<p>Wrap this entire list is a <code>&lt;div&gt;</code> and style it somewhat similarly to the returns paragraph we just styled</p>
+<p>Name this division appropriately (perhaps header) and try styling it.</p>
 </li>
 <li>
-<p>Find an image to represent the shop, and see if you can mimic the CSS rules we just deployed to move the image into a right hand column as we have with the sidebar.</p>
+<p>Create another division for the binary numbers image <code>&lt;img</code>&gt;. See if you can mimic the CSS rules we just deployed to move the image into a right hand column. To do this consider what width you would like the header division to utilise and how much the image?</p>
 </li>
 </ul>
-    </div>
-</div>
-<br> <br>
+	  </section>
+<script>
 
+function addCaptions() {
+  var images = $(".moodle-book img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0) 
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
+  });
+};
 
-    </div>
-
-
-<div class="credits navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <small>
-    Prepared by Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
-    <a href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-        target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-    </a>
-    </small>
-</div>    <script>
+// Need to check if we have already been loaded
+seen = 0;
 
 $(document).ready(function()
-{
-  $("img").addClass ("img-responsive");
+{ 
+  if (seen == 0)
+  { 
+    // not loaded before - so do the restyling once (need to moodle book print)
+    $(".moodle-book img").addClass ("ui image");
+    $(".moodle-book pre").addClass ("ui segment");
+    addCaptions();
+    seen = 1;
+  }
 
-  $(".tab-content img").each(function()
-  {
-    var title = this.alt;
-    $(this).after('<figcaption class="caption"> <em>'+ title +'</em></figcaption>');
-  });
-})    </script>
 
+})</script>
+  <br>  
+  <div class="ui fixed bottom borderless menu">'
+    <div class="ui small item"> 
+    <p id="footertext">
+    Prepared by  Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a  
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/" 
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
+    </div>
+  </div>   
+    
+  <script>
+    $(document).ready(function()
+    {  
+      $('.tab-menu.menu .item').tab();
+    });
+  </script>   
   </body>
  </html>
