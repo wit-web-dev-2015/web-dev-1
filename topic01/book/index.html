@@ -1,23 +1,22 @@
  <!DOCTYPE html>
  <html>
    <head>
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-   
-     <title> Lab-01 </title>
-   
+
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-     <link rel="stylesheet" href="./style/semantic/semantic.min.css" type="text/css">
-     <script src="./style/custom/jquery-2.1.0.min.js"></script> 
-     <script src="./style/custom/jquery.address-1.6.min.js"></script>
-     <script src="./style/semantic/semantic.min.js"></script>
-   
-     <link rel="stylesheet" href="./style/highlight/solarized_light.css">
-     <script src="./style/highlight/highlight.pack.js"></script> 
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+     <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-    <style>
+      <style>
 
 
 body 
@@ -25,129 +24,97 @@ body
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
 }
 
-#container
+figcaption
 {
-  margin :10px
+  margin-bottom: 20px;
 }
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+<style>
+
 
 code
 {
-	font-family: "Monaco";
-	font-size: 110%;
+  font-family: "Monaco";
+  font-size: 110%;
 }
 
-h1 
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
 {
   font-style:italic;
-  font-size:120%;
+  font-size:130%;
   border-bottom: thin solid black;
 }
-h2 
+h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
-h3 
+h3
 {
   font-size:100%;
   border-bottom: thin solid black;
 }
 
-#footertext 
-{
-  font-size:70%
-}
+</style>
 
-#title 
-{
-  font-size:120%;
-  color: black;
-  text-align: right;
-  background-color : white;
-}
-
-img 
-{
-   padding:1px;
-   border:1px solid black;
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-
-header img
-{
-	 padding:1px;
-   border:0px solid black;
-}
-
-header h1
-{
-  font-style:normal;
-  font-size:120%;
-  border-bottom: 0px;
-}
-
-header h2
-{
-  font-style:normal;
-  font-size:100%;
-  border-bottom: 0px;
-}
-
-header h3
-{
-  font-style:normal;
-  font-size:90%;
-  border-bottom: 0px;
-}
-
-.cover
-{
-    width: 290px;
-    height: 290px;
-    border:1px solid lightgray;
-}
-.image-thumbnail
-{
-    height: 100%;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-position: center;
-}
-
-#container .card .description {
-  min-height: 200px;
-}
-
-    </style>
-
-  </head>
-  <body>
-  <nav class="ui fixed top pointing borderless inverted menu">
-    <header class="header item"> <a href="../index.html">Introducing HTML</a></header>
-    <div class="right tab-menu menu">
-          <a class="item" data-tab="Lab-01"> Lab-01 </a>
-          <a class="item" data-tab="01"> 01 </a>
-          <a class="item" data-tab="02"> 02 </a>
-          <a class="item" data-tab="03"> 03 </a>
-          <a class="item" data-tab="04"> 04 </a>
-          <a class="item" data-tab="Exercises"> Exercises </a>
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+      <div class="navbar-brand">
+        <a onclick="window.history.back()" href="#"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
+        Introducing HTML
+      </div>
     </div>
-  </nav>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href= "#Lab-01" data-toggle="tab"> Lab-01 </a> </li>
+          <li><a href= "#01" data-toggle="tab"> 01 </a> </li>
+          <li><a href= "#02" data-toggle="tab"> 02 </a> </li>
+          <li><a href= "#03" data-toggle="tab"> 03 </a> </li>
+          <li><a href= "#04" data-toggle="tab"> 04 </a> </li>
+          <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <br>
+<br><br>
 
-	  <section data-tab="Lab-01" class="ui tab stacked moodle-book segment">
-	     <h1>Objectives</h1>
+<div class="tab-content">
+  <div class="tab-pane active" id="Lab-01">
+    <h1>Objectives</h1>
 <p>The labs are where you will do the real learning in this module. In Lab0-01 you will become familiar with the editor Sublime. We will then use this editor to create a simple multi-page web site containing a small variety of text, images and links. In this lab we will explore some of the basic features of CSS, including colours, font and interesting techniques for setting styles across entire sections of a page.</p>
-	  </section>
-	  <section data-tab="01" class="ui tab stacked moodle-book segment">
-	     <h1>Setup</h1>
+  </div>
+
+    <div class="tab-pane fade" id="01">
+      <h1>Setup</h1>
 <h2>Instructions for working in Walton Building PC Labs:</h2>
 <p>If you are working on the workstations in the IT Building, choose Sublime Text 2 from the programs menu.</p>
 <p><img alt="" src="./img/00.png"></p>
-<p>locate the C: Drive in the Explorer. Navigate to C:\dev\eclipse\javascript folder. Run (double click on) the "Eclipse" application.</p>
 <p>Proceed with the next step of the lab.</p>
 <h2>Instructions for working on your own laptop</h2>
 <p>Download and install Sublime Text 2 from</p>
@@ -155,16 +122,15 @@ header h3
 <li><a href="http://www.sublimetext.com/">http://www.sublimetext.com/</a></li>
 </ul>
 <p>Select the appropriate download for your laptop (OS, Windows, Linux)</p>
-<p>Install the following:</p>
 <p>This site has some useful tutorial videos in how to use Sublime Text 2. You should at least watch the first 2.</p>
 <ul>
 <li>&lt;http://code.tutsplus.com/courses/perfect-workflow-in-sublime-text-2</li>
 </ul>
 <p>We recommend using Chrome as your web browser.</p>
-	  </section>
-	  <section data-tab="02" class="ui tab stacked moodle-book segment">
-	     <h1>First Project</h1>
-<p>If you are working on a pc in the IT lab, create a new folder on either your G drive or on your usb drive, name the folder WebDevelopment, inside that folder create another folder called Lab1.</p>
+    </div>
+    <div class="tab-pane fade" id="02">
+      <h1>First Project</h1>
+<p>If you are working on a pc in the IT lab, open your WebDevelopment folder that you created last week (on your G drive or USB drive), inside that folder create another folder called Lab01.</p>
 <p>Open Sublime and choose Open Folder from the File menu. Navigate to the WebDevelopment folder and choose click OK.</p>
 <p>In sublime click on the WebDevelopment folder, you should see the Lab1 folder appear.</p>
 <p><img alt="" src="./img/01.png"></p>
@@ -185,9 +151,9 @@ header h3
 <p>It is worth making sure your folder structure is the same as this:</p>
 <p><img alt="" src="./img/04.png"></p>
 <p>The WebDevelopment folder will hold a folder for each lab you work on for this module. For today the Lab1 folder will contain at least one .hmtl file as well as an images folder which in turn contains 6 images.</p>
-	  </section>
-	  <section data-tab="03" class="ui tab stacked moodle-book segment">
-	     <h1>HTML pages</h1>
+    </div>
+    <div class="tab-pane fade" id="03">
+      <h1>HTML pages</h1>
 <p>We are going to create a web site that is based on the Google Play site or the Apple app store. It will present mobile apps, music, and movies to the user.</p>
 <p>Choose New File from the File menu, next choose Save from the file menu and name it apps.html
 Do the same for a file named movies.html and one called music.html</p>
@@ -247,9 +213,9 @@ Do the same for a file named movies.html and one called music.html</p>
 <p>Test these pages out by opening the index.html in your browser window. Do all of the images display? Does the link to the apps.html page work?</p>
 <p><img alt="" src="./img/07.png"></p>
 <p><img alt="" src="./img/08.png"></p>
-	  </section>
-	  <section data-tab="04" class="ui tab stacked moodle-book segment">
-	     <h1>CSS</h1>
+    </div>
+    <div class="tab-pane fade" id="04">
+      <h1>CSS</h1>
 <p>We will now introduce a stylesheet into our project. Stylesheets are usually maintained in separate files with the .css extension. Choose New File from the File menu and name it 'style.css'. </p>
 <p>The folder structure now looks like this:</p>
 <p><img alt="" src="./img/06.png"></p>
@@ -299,9 +265,9 @@ Do the same for a file named movies.html and one called music.html</p>
 
 <p>Your css file now looks like this:</p>
 <p><img alt="" src="./img/10.png"></p>
-	  </section>
-	  <section data-tab="Exercises" class="ui tab stacked moodle-book segment">
-	     <h1>Exercises</h1>
+    </div>
+    <div class="tab-pane fade" id="Exercises">
+      <h1>Exercises</h1>
 <h1>Solution So Far..</h1>
 <p>This is an archive (zip file) of a solution to the lab so far:</p>
 <ul>
@@ -321,56 +287,33 @@ Investigate the use of and differences between these elements here:</p>
 </ul>
 <h2>Images</h2>
 <p>Investigate reducing the size of the images, currently they are 176*176. Try using an image editor to reduce their size to 50% smaller. It is important to have some understanding of using an image editor. The most basic available on all windows pc/laptop's is Paint which has a resize option on the toolbar.</p>
-	  </section>
-<script>
+    </div>
+</div>
+<br> <br>
 
-function addCaptions() {
-  var images = $(".moodle-book img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0) 
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
-    }
-  });
-};
 
-// Need to check if we have already been loaded
-seen = 0;
+    </div>
+
+
+<div class="credits navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <small>
+    Prepared by Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
+    <a href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+    </a>
+    </small>
+</div>    <script>
 
 $(document).ready(function()
-{ 
-  if (seen == 0)
-  { 
-    // not loaded before - so do the restyling once (need to moodle book print)
-    $(".moodle-book img").addClass ("ui image");
-    $(".moodle-book pre").addClass ("ui segment");
-    addCaptions();
-    seen = 1;
-  }
+{
+  $("img").addClass ("img-responsive");
 
+  $(".tab-content img").each(function()
+  {
+    var title = this.alt;
+    $(this).after('<figcaption class="caption"> <em>'+ title +'</em></figcaption>');
+  });
+})    </script>
 
-})</script>
-  <br>  
-  <div class="ui fixed bottom borderless menu">'
-    <div class="ui small item"> 
-    <p id="footertext">
-    Prepared by  Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a  
-     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/" 
-       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-     </a>
-     </p>
-    </div>
-  </div>   
-    
-  <script>
-    $(document).ready(function()
-    {  
-      $('.tab-menu.menu .item').tab();
-    });
-  </script>   
   </body>
  </html>
