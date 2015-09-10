@@ -123,74 +123,67 @@ h3
 <p>You should have the files created from last week. If you do then make a copy of the Lab1 folder and name the new copy Lab2.</p>
 <p>However, if you did not save the files or missed the class, here is the archive here of the completed lab (with exercises):</p>
 <ul>
-<li><a href="./archives/Lab1-incl-exercises.zip">Lab1-incl-exercises.zip</a></li>
+<li><a href="./archives/lab01-incl-exercises.zip">lab01-incl-exercises.zip</a></li>
 </ul>
-<p>When you expand the zip file rename the top folder (lab1-incl-exercises) as Lab2. Save this Lab2 folder into your WebDevelopment folder that you created last week.</p>
-<p>Open Sublime and navigate to Lab2:</p>
-<p><img alt="" src="./img/00.png"></p>
-<p>Create a new folder called Movies, in that folder create a new page name it kingKong.html.
+<p>When you expand the zip file rename the top folder (lab01-incl-exercises) as Lab02. Save this Lab02 folder into your WebDevelopment folder that you created last week.</p>
+<p>Open Sublime and navigate to Lab02:</p>
+<p>Create a new folder called Deals, in that folder create a new page name it deals.html.
 Put the following code into the page and save.</p>
-<pre><code>&lt;!DOCTYPE HTML&gt;
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;Movie&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
-     &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score&lt;/h1&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;h2&gt;King Kong&lt;/h2&gt;
-      &lt;img src=&quot;images/kingKong.jpg&quot;/&gt;
-      &lt;p&gt;1976&lt;/p&gt;
-      &lt;p&gt;Adventure, Fantasy, Horror&lt;/p&gt;
-      &lt;h3&gt;Ratings:&lt;/h3&gt;
-      &lt;p&gt;&lt;em&gt;5.8&lt;/em&gt;/10 from 20,335 users&lt;/p&gt;
-      &lt;p&gt;A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla&lt;/p&gt;
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it's macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+    &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 
+<p>This image is needed for this page:</p>
+<p><img alt="" src="./img/business.png"></p>
 <p>View the page in the web browser. What is wrong with it?
 We wrote all of the href path's the same as we had before so why do they not work for the link and the images?
-If we are viewing the kingKong web page stored in the movies folder, does that folder contain the index.html, apps.html, music.html files? No is the simple answer so our path is incorrect. We must tell the browser to move up a level in the directories in order to find those pages. Your paths's should be as below for each link and for each image. It is very important at this stage to understand this example as you need to be able to write correct paths to your files and images.</p>
+If we are viewing the deals web page stored in the deals folder, does that folder contain the index.html file? No is the simple answer so our path is incorrect. We must tell the browser to move up a level in the directories in order to find those pages. Your paths's should be as below for each link and for each image. It is very important at this stage to understand this example as you need to be able to write correct paths to your files and images.</p>
 <pre><code>
-&lt;!DOCTYPE HTML&gt;
+&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;Movie&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../style.css&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
-     &lt;img src=&quot;../images/score.png&quot;/&gt;&lt;h1&gt;Score&lt;/h1&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;../apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;../music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;../movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;h2&gt;King Kong&lt;/h2&gt;
-      &lt;img src=&quot;../images/kingKong.jpg&quot;/&gt;
-      &lt;p&gt;1976&lt;/p&gt;
-      &lt;p&gt;Adventure, Fantasy, Horror&lt;/p&gt;
-      &lt;h3&gt;Ratings:&lt;/h3&gt;
-      &lt;p&gt;&lt;em&gt;5.8&lt;/em&gt;/10 from 20,335 users&lt;/p&gt;
-      &lt;p&gt;A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla&lt;/p&gt;
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it's macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+     &lt;h2&gt;Insanity Deal&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot; /&gt;
+        With the new $5 Insanity Deals from Bundlehunt you receive every day a highly reduced app for $5 only with savings up to 75%. Not a real bundle but, as there are multiple apps for only $5 each, one new per day, for the days to come.
+    &lt;/p&gt;
+    &lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-
 </code></pre>
 
-<p>On the movies.html page add a link to the kingKong.html page. Test the link to make sure you have written the path correctly.</p>
+<p>On the index.html page add a link to the deals.html page. Test the link to make sure you have written the path correctly.</p>
     </div>
     <div class="tab-pane fade" id="02">
       <h1>CSS Inheritance</h1>
 <p>Currently our CSS file looks like this:</p>
 <pre><code class="css">h1, h2
 {
-  color: gray
+  color: red;
 }
 body
 {
@@ -204,13 +197,13 @@ h1
 
 <p>Which produces the following style in the browser:</p>
 <p><img alt="" src="./img/07.png"></p>
-<p>Note the following text in our page:</p>
-<pre><code class="html">      &lt;p&gt;&lt;em&gt;5.8&lt;/em&gt;/10 from 20,335 users &lt;/p&gt;  
+<p>Add the following element around the text "great prices" in the main paragraph of the index.html page:</p>
+<pre><code class="html">      &lt;em&gt;great prices&lt;/em&gt;
 </code></pre>
 
 <p>This uses the <code>&lt;em&gt;</code> element, which introduces an emphasis style:</p>
 <ul>
-<li><a href="http://reference.sitepoint.com/html/em">http://reference.sitepoint.com/html/em</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em</a></li>
 </ul>
 <p>You may be able to see that this text is in italics.</p>
 <p>We can introduce the following rule into our stylesheet (style.css) to target this specific element:</p>
@@ -220,7 +213,7 @@ h1
 }
 </code></pre>
 
-<p>Save the stylesheet and refresh the page in the browser. The text '5.8' should be in italics and the colour red.</p>
+<p>Save the stylesheet and refresh the page in the browser. The text 'great prices' should be in italics and the colour red.</p>
 <p>When experimenting with CSS, we often want to experiment with the effects we are introducing. Specifically, introducing some rules, and then perhaps removing them again to see the difference (if any).</p>
 <p>Take the body rule in your stylesheet and 'comment out' the font rule:</p>
 <pre><code class="css">body
@@ -237,49 +230,39 @@ h1
 }
 </code></pre>
 
-<p>Have a close look at the resultant page. What type of font is used by the headings? What type for the paragraphs? Can you explain the difference? Comment out the body font rule again (as we did above). What is the effect?</p>
+<p>Have a close look at the resulting page. What type of font is used by the headings? What type for the paragraphs? Can you explain the difference? Comment out the body font rule again (as we did above). What is the effect?</p>
     </div>
     <div class="tab-pane fade" id="03">
       <h1>CSS Classes</h1>
-<p>Open the kingKong.html file.</p>
-<p>How would we style each paragraph separately so that the year of the film, the genre, and the ratings had a different colour text? Styling the <code>&lt;p&gt;</code> element means that all <code>&lt;p&gt;</code> elements are styled in the same way. We can define a class of elements, and then apply styles to any element that belongs to that class.</p>
-<p>Go to the first paragraph which holds the year. This text we want to display as red. Add an attribute called class, with an id "special" to the <code>&lt;p&gt;</code> element as below:</p>
-<pre><code class="html">   &lt;h2&gt;King Kong&lt;/h2&gt;
-      &lt;img src=&quot;images/kingKong.jpg&quot;/&gt;
-      &lt;p class=&quot;special&quot;&gt;1976&lt;/p&gt;
-      &lt;p&gt;Adventure, Fantasy, Horror&lt;/p&gt;
-      &lt;h3&gt;Ratings:&lt;/h3&gt;
-      &lt;p&gt;&lt;em&gt;5.8&lt;/em&gt;/10 from 20,335 users&lt;/p&gt;
-      &lt;p&gt;A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla&lt;/p&gt;
+<p>Open the deals.html file.</p>
+<p>How would we style each heading 2 separately so that each bundle has a different colour text? Styling the <code>&lt;h2&gt;</code> element means that all <code>&lt;h2&gt;</code> elements are styled in the same way. We can define a class of elements, and then apply styles to any element that belongs to that class.</p>
+<p>Go to the first h2 which holds the business bundle. This text we want to display as red. Add an attribute called class, with an id "special" to the <code>&lt;h2&gt;</code> element as below:</p>
+<pre><code class="html">  &lt;h2 class=&quot;special&quot;&gt;Business Bundle&lt;/h2&gt;
 </code></pre>
 
-<p>The paragraph above now belongs to the "special" class. We can now apply rules to that class of elements. To select a class in CSS, you write the selector like this:</p>
+<p>The heading 2 above now belongs to the "special" class. We can now apply rules to that class of elements. To select a class in CSS, you write the selector like this:</p>
 <pre><code class="css">
-p.special
+h2.special
 {
   color: red;
 }
 </code></pre>
 
-<p>This allows you to select all elements that belong to a particular class. Save your html file and your css file and reload the kingKong.htm web page in your browser.</p>
-<p>At this stage, if there is no change it is because, we didn't link the kingKong.html to the style sheet:  </p>
-<pre><code class="html">    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
-</code></pre>
-
-<p>This linkage must be established in each html file. Introduce this into 'kingKong.html' now if you don't already have it, and reload. You should see the class rule we just introduced come into play.</p>
-<p>However, if you use the rule as shown above, you will still have a problem - as the 'kingKong.html' file is in the movies subdirectory of the folder containing the stylesheet. We will need to reflect this in the link element:</p>
+<p>This allows you to select all elements that belong to a particular class. Save your html file and your css file and reload the deals.html web page in your browser.</p>
+<p>If you are having trouble with seeing the results in the browser it may be because the path to the style.css file is incorrect.
+The link in the deals.html page must show as below:</p>
 <pre><code class="html">    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../style.css&quot; media=&quot;screen&quot; /&gt;
 </code></pre>
 
-<p>If you also wanted the heading 2 to be associated with the same paragraph class to be red in colour then you add an extra selector to your css rule</p>
+<p>If you also wanted the paragraph to be associated with the same heading 2 class to be red in colour then you add an extra selector to your css rule</p>
 <pre><code class="css">h2.special, p.special
 {
   color: red;
 }
 </code></pre>
 
-<p>You must also add the class name to the <code>&lt;h2&gt;</code> element in your html file.</p>
-<pre><code class="css">&lt;h2 class=&quot;special&quot;&gt;
+<p>You must also add the class name to the <code>&lt;p&gt;</code> element in your html file.</p>
+<pre><code class="css">&lt;p class=&quot;special&quot;&gt;
 </code></pre>
 
 <p>If we were to continue adding elements to a class this will get to be a lengthy process so we can write a rule for all the elements in a class:</p>
@@ -500,40 +483,41 @@ p
 <pre><code class="html">  &lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;APP Store&lt;/title&gt;
-    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot;/&gt;
+    &lt;title&gt;Bundle APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
   &lt;/head&gt;
   &lt;body&gt;
-   &lt;img src=&quot;images/score.png&quot;/&gt;&lt;h1&gt;Score&lt;/h1&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;h2&gt;Most Popular Apps&lt;/h2&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;img src=&quot;images/lightening.jpg&quot;/&gt;Strike I OGD  &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;img src=&quot;images/plane.png&quot;/&gt;Crash Landing NiLabs@google  &lt;img src=&quot;images/star40.gif&quot; alt=&quot;4 stars&quot;&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;h2&gt;Recommended Apps&lt;/h2&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;img src=&quot;images/warrior.jpg&quot;/&gt;Chop&lt;/li&gt;
-      &lt;li&gt;&lt;img src=&quot;images/xbox.jpg&quot;/&gt;XBox mania&lt;/li&gt; 
-    &lt;/ul&gt;
+    &lt;img src=&quot;images/banner.png&quot;/&gt;
+      &lt;h3&gt;Freebie&lt;/h3&gt;
+     &lt;p&gt;
+       Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 5 apps from Ondesoft. The bundle worth $146 will be probably available only a couple of days so you’d better hurry up to get it.
+     &lt;/p&gt;
+     &lt;img src=&quot;star40.gif&quot;/&gt;
+     &lt;p&gt;
+       &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;Black Brain Brew Elixir&quot; /&gt;
+     &lt;/p&gt;
+     &lt;/p&gt;
+     &lt;hr&gt;
+     &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+     &lt;p&gt;
+       Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%. There is n...
+     &lt;/p&gt;
+     &lt;img src=&quot;start45.gif&quot;/&gt;
+     &lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 
 </code></pre>
 
-<p>The above content relies on a number of new image files:</p>
-<hr>
-<p><img alt="" src="./img/star35.gif"></p>
+<p>The above content relies on a couple of new image files:</p>
 <hr>
 <p><img alt="" src="./img/star40.gif"></p>
 <hr>
 <p><img alt="" src="./img/star45.gif"></p>
 <hr>
-<p>Save these three files to your computer. To do this, right click on each one in turn and select save as. Then you can drag and drop them directly into the images folder in your eclipse project.</p>
-<p>If all this goes according to plan,  index page should now look something like this:</p>
-<p><img alt="" src="./img/07.png"></p>
+<p>Save these files to your computer. To do this, right click on each one in turn and select save as. Then you can drag and drop them directly into the images folder in your lab02 folder.</p>
+<p>If all this goes according to plan,  the app page should now look something like this:</p>
+<p><img alt="" src="./img/06.png"></p>
     </div>
     <div class="tab-pane fade" id="08">
       <h1>Popular Apps Paragraph</h1>
