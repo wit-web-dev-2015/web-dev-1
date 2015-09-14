@@ -1,23 +1,22 @@
  <!DOCTYPE html>
  <html>
    <head>
-     <meta charset="utf-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-   
-     <title> Lab-03 </title>
-   
+
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-     <link rel="stylesheet" href="./style/semantic/semantic.min.css" type="text/css">
-     <script src="./style/custom/jquery-2.1.0.min.js"></script> 
-     <script src="./style/custom/jquery.address-1.6.min.js"></script>
-     <script src="./style/semantic/semantic.min.js"></script>
-   
-     <link rel="stylesheet" href="./style/highlight/solarized_light.css">
-     <script src="./style/highlight/highlight.pack.js"></script> 
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+     <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
-    <style>
+      <style>
 
 
 body 
@@ -25,666 +24,394 @@ body
   font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
 }
 
-#container
+figcaption
 {
-  margin :10px
+  margin-bottom: 20px;
 }
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+.credits
+{
+  min-height:20px;
+}
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+<style>
+
 
 code
 {
-	font-family: "Monaco";
-	font-size: 110%;
+  font-family: "Monaco";
+  font-size: 110%;
 }
 
-h1 
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
 {
   font-style:italic;
-  font-size:120%;
+  font-size:130%;
   border-bottom: thin solid black;
 }
-h2 
+h2
 {
   font-size:110%;
   border-bottom: thin solid black;
 }
-h3 
+h3
 {
   font-size:100%;
   border-bottom: thin solid black;
 }
 
-#footertext 
-{
-  font-size:70%
-}
+</style>
 
-#title 
-{
-  font-size:120%;
-  color: black;
-  text-align: right;
-  background-color : white;
-}
-
-img 
-{
-   padding:1px;
-   border:1px solid black;
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-
-header img
-{
-	 padding:1px;
-   border:0px solid black;
-}
-
-header h1
-{
-  font-style:normal;
-  font-size:120%;
-  border-bottom: 0px;
-}
-
-header h2
-{
-  font-style:normal;
-  font-size:100%;
-  border-bottom: 0px;
-}
-
-header h3
-{
-  font-style:normal;
-  font-size:90%;
-  border-bottom: 0px;
-}
-
-.cover
-{
-    width: 290px;
-    height: 290px;
-    border:1px solid lightgray;
-}
-.image-thumbnail
-{
-    height: 100%;
-    background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-position: center;
-}
-
-#container .card .description {
-  min-height: 200px;
-}
-
-    </style>
-
-  </head>
-  <body>
-  <nav class="ui fixed top pointing borderless inverted menu">
-    <header class="header item"> <a href="../index.html">Introducing CSS</a></header>
-    <div class="right tab-menu menu">
-          <a class="item" data-tab="Lab-03"> Lab-03 </a>
-          <a class="item" data-tab="01"> 01 </a>
-          <a class="item" data-tab="02"> 02 </a>
-          <a class="item" data-tab="03"> 03 </a>
-          <a class="item" data-tab="04"> 04 </a>
-          <a class="item" data-tab="05"> 05 </a>
-          <a class="item" data-tab="06"> 06 </a>
-          <a class="item" data-tab="07"> 07 </a>
-          <a class="item" data-tab="08"> 08 </a>
-          <a class="item" data-tab="Exercises"> Exercises </a>
+<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
+      <div class="navbar-brand">
+        <a onclick="window.history.back()" href="#"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
+        Introducing CSS
+      </div>
     </div>
-  </nav>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href= "#Lab-03" data-toggle="tab"> Lab-03 </a> </li>
+          <li><a href= "#01" data-toggle="tab"> 01 </a> </li>
+          <li><a href= "#02" data-toggle="tab"> 02 </a> </li>
+          <li><a href= "#03" data-toggle="tab"> 03 </a> </li>
+          <li><a href= "#04" data-toggle="tab"> 04 </a> </li>
+          <li><a href= "#05" data-toggle="tab"> 05 </a> </li>
+          <li><a href= "#06" data-toggle="tab"> 06 </a> </li>
+          <li><a href= "#07" data-toggle="tab"> 07 </a> </li>
+          <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <br>
+<br><br>
 
-	  <section data-tab="Lab-03" class="ui tab stacked moodle-book segment">
-	     <h1>Objectives</h1>
-<p>This weeks lab will give you more practical experience of the box model and specifically how to build a simple multi-column layout using the techniques we have explored in class. You should complete this lab before starting to consider your project in detail.</p>
-	  </section>
-	  <section data-tab="01" class="ui tab stacked moodle-book segment">
-	     <h1>Setup</h1>
-<p>In Sublime, open your WebDevelopment folder and create a new folder called "lab03". This time we will not be using any content from the previous labs.</p>
-<p>In this project create two files in the lab03 folder:</p>
+<div class="tab-content">
+  <div class="tab-pane active" id="Lab-03">
+    <h1>CSS Design</h1>
+  </div>
+
+    <div class="tab-pane fade" id="01">
+      <h1>Setup</h1>
+<p>Open Sublime text editor - and open the <code>directory</code> containing your web development projects (this folder is called <code>web-prj</code> below):</p>
+<p><img alt="" src="img/00.png"></p>
+<p>If you have room, also open the Chrome web browser side by side:</p>
+<p><img alt="" src="img/02.png"></p>
+<p>In the above, we are keeping a tab of the browser open at</p>
 <ul>
-<li>
-<p>home.html</p>
-</li>
-<li>
-<p>home.css</p>
-</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">https://developer.mozilla.org/en-US/docs/Web/HTML/Element</a></li>
 </ul>
-<pre><code class="html">&lt;!DOCTYPE html&gt;
+<p>The Mozilla foundation are an excellent source of reference information on all things web - and it is useful to keep the html reference site open to occasionally check that your are using the correct structure for your elements.</p>
+<p>Create a new folder in your project called <code>lab03</code> </p>
+<p><img alt="" src="img/03.png"></p>
+<p>(Right click on <code>web-prj</code> to create the folder.</p>
+<p>Now we can create the project structure:</p>
+<p><img alt="" src="img/04.png"></p>
+<p>That is, we have created these folders inside the project:</p>
+<ul>
+<li>about</li>
+<li>deals</li>
+<li>images</li>
+</ul>
+<p>Here is a blank html file:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
-    &lt;title&gt;Home Page&lt;/title&gt;
+    &lt;title&gt;&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;
-      Lorem ipsum dolor sit
-    &lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Create a file called 'index.html' in the following locations:</p>
+<p>lab03
+ - index.html
+ - about/index.html
+ - deals/index.html</p>
+<p>Should see something like this:</p>
+<p><img alt="" src="img/05.png"></p>
+<p>You can see all the files are open in tabs across the top.</p>
+<p>There are alternative colour schemes - for instance 'Solarised Light':</p>
+<p><img alt="" src="img/06.png"></p>
+<p>These are available via the <code>Preferences</code> menu.</p>
+    </div>
+    <div class="tab-pane fade" id="02">
+      <h1>Main page</h1>
+<h2>lab03/index.html</h2>
+<p>Open the main index.html page and replace the template contents with the following:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;Bundle App Store&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to the App Bundle Store&lt;/h1&gt;
     &lt;p&gt;
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed feugiat nisi  
-      at sapien. Phasellus varius tincidunt ligula. Praesent nisi. Duis  
-      sollicitudin. Donec dignissim, est vel auctor blandit, ante est laoreet  
-      neque, non pellentesque mauris turpis eu purus.
-    &lt;/p&gt;  
+      This store brings you great app bundles week after week. We select the best power 
+      user apps from a broad range of suppliers and combine them into great deals. These are the highest quality apps form the best publishers, at great prices.  
+    &lt;/p&gt;
+
     &lt;p&gt;
-      Suspendisse mollis leo nec diam. Vestibulum pulvinar tellus sit amet nulla  
-      fringilla semper. Aenean aliquam, urna et accumsan sollicitudin, tellus  
-      pede lobortis velit, nec placerat dolor pede nec nibh. Donec fringilla. Duis  
-      adipiscing diam at enim. Vestibulum nibh.
-    &lt;/p&gt;  
+      Whether you are interested in gaming or graphics design, software development or media production - we have the bundle for you. Each app bundle is designed to compliment the others, delivering you an exciting take on a scene.  
+    &lt;/p&gt;
+
     &lt;p&gt;
-      Nulla facilisi. Aliquam dapibus leo eget leo. Etiam vitae turpis sit amet  
-      massa posuere cursus. Sed vitae justo quis tortor facilisis ultrices.  
-      Integer id erat. Donec at felis ut erat interdum vestibulum. Quisque et eros.  
-      Donec fringilla, est in condimentum venenatis, tortor velit vehicula sem, in  
-      elementum quam sapien eu lectus. In dolor urna, ullamcorper vel, tempor sit  
-      amet, semper ut, felis. Praesent nisi.
-    &lt;/p&gt;  
+      Our guarantee: at the store, we're committed to providing you, 
+      with an exceptional quality and reliability. Every application is checked in detail
+      for stability, usability and inter-interoperability. If you are unhappy with any individual app in a bundle we will refund you the full amount for the complete suite, no questions asked.
+    &lt;/p&gt;
+
     &lt;p&gt;
-      Fusce scelerisque viverra quam. Nam urna. Nullam urna libero, euismod at,  
-      euismod sit amet, porttitor ac, mauris.
-    &lt;/p&gt;  
+      We roll over the bundles on a weekly basis, so be sure to check back regularly for a bundle that suits your tastes. If you dont see application bundles that suit your interests - please let us know! We are always interested in combining new and interesting bundles and will strive to figure out your needs and match them to current or upcoming offerings.
+    &lt;/p&gt;
+
     &lt;p&gt;
-      Vestibulum interdum aliquet lacus. Vestibulum egestas. Fusce adipiscing  
-      quam sed metus.
-    &lt;/p&gt;  
+      Now that you've and idea of what we do, why not call into our store? We have create some  
+      &lt;a href=&quot;about/index.html&quot;
+         title=&quot;Detailed Directions to the Store&quot;&gt;detailed directions&lt;/a&gt;   
+      to get you here in record time. Come and join us anytime.
+    &lt;/p&gt;
+
+    &lt;h2&gt;What's Apps we Like&lt;/h2&gt;
+
     &lt;p&gt;
-      Nullam dignissim aliquam dui. Proin laoreet, elit sed pulvinar  
-      sollicitudin, urna arcu fermentum felis, in rhoncus nunc neque vitae  
-      libero.
-    &lt;/p&gt;  
-    &lt;ul&gt;  
-      &lt;li&gt;Mauris&lt;/li&gt;  
-      &lt;li&gt;Cras&lt;/li&gt;  
-      &lt;li&gt;Proin&lt;/li&gt;  
-      &lt;li&gt;Integer&lt;/li&gt;  
-      &lt;li&gt;Curabitur&lt;/li&gt;  
-      &lt;li&gt;Integer&lt;/li&gt;  
-      &lt;li&gt;Suspendisse&lt;/li&gt;  
-      &lt;li&gt;Quisque&lt;/li&gt;  
-    &lt;/ul&gt;  
+      We're frequently asked about the the apps we use most in the store. Here is a list of our current favorites:
+    &lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Hype by Tumult&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Webstorm by Idea&lt;/span&gt;&lt;/li&gt;
+      &lt;li&gt;Sublime, by sublimetext.com/li&gt;
+      &lt;li&gt;Desktop Utility by Sweet Productions&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>... and open this same file in the browser:</p>
+<p><img alt="" src="img/07.png"></p>
+<p>Check the 'Directions' link and make sure it works. Introduce the following content for the file <code>about/index.html</code>:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;Bundle Store Directions&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Directions&lt;/h1&gt;
+    &lt;p&gt;Take the 305 S exit to Webville - go 0.4 mi&lt;/p&gt;
+    &lt;p&gt;Continue on 305 - go 12 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at Structure Ave N - go 0.6 mi&lt;/p&gt;
+    &lt;p&gt;Turn right and head toward Structure Ave N - go 0.0 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at Structure Ave N - go 0.7 mi&lt;/p&gt;
+    &lt;p&gt;Continue on Stucture Ave S - go 0.2 mi&lt;/p&gt;
+    &lt;p&gt;Turn right at SW Presentation Way - go 0.0 mi&lt;/p&gt;
     &lt;p&gt;
-      Proin quis orci eu erat molestie varius. Praesent condimentum  
-      orci in lectus. Ut ipsum. In hac habitasse platea dictumst.
+      &lt;a href=&quot;../index.html&quot;&gt;Back to the Store&lt;/a&gt;
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
 
-<p>Reloading in the browser, it should look like this:</p>
-<p><img alt="" src="./img/00.png"></p>
-	  </section>
-	  <section data-tab="02" class="ui tab stacked moodle-book segment">
-	     <h1>Div</h1>
-<p>We are now going to divide our content into a series of sections:</p>
+<p>Any change you make in the sublime will only appear in the browser if you:</p>
 <ul>
-<li>
-<p>header</p>
-</li>
-<li>
-<p>maincontent</p>
-</li>
-<li>
-<p>navigation</p>
-</li>
-<li>
-<p>footer</p>
-</li>
+<li>save the changes in sublime</li>
+<li>refresh the page in chrome.</li>
 </ul>
-<p>..using divs.</p>
-<p>First the "header":</p>
-<pre><code class="html">    &lt;div id=&quot;header&quot;&gt;  
-      &lt;h1&gt;
-        Lorem ipsum dolor sit
-      &lt;/h1&gt;  
-    &lt;/div&gt;
-</code></pre>
+<p>Make sure both pages render in chrome as expected.</p>
+<p>Additionally, chrome has some interesting features to let you explore the page 'source'. The simplest one is to just right click anywhere in the browsers and select <code>View Source</code>:</p>
+<p><img alt="" src="img/08.png"></p>
+<p>A more sophisticated option is to use <code>Developer Tools</code>:</p>
+<p><img alt="" src="img/09.png"></p>
+<p>To reproduce the above, first close the <code>source</code> view we just opened above, and proceed to access the tools as shown here:</p>
+<p><img alt="" src="img/10.png"></p>
+<p>Explore the developer tools for a little while - notice how the <code>box model</code> seems to be visible. Then close it, we will return to it later.</p>
+    </div>
+    <div class="tab-pane fade" id="03">
+      <h1>Style Sheet</h1>
+<p>Our first step will be to include a style sheet. Create a file called 'store.css' and include the following:</p>
+<pre><code>body {
+  font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
+}
 
-<p>Be sure to preserve the indentation as shown</p>
-<p>Next "maincontent"</p>
-<pre><code class="html">    &lt;div id=&quot;maincontent&quot;&gt;
-      &lt;p&gt;
-        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed feugiat nisi  
-        at sapien. Phasellus varius tincidunt ligula. Praesent nisi. Duis  
-        sollicitudin. Donec dignissim, est vel auctor blandit, ante est laoreet  
-        neque, non pellentesque mauris turpis eu purus.
-      &lt;/p&gt;  
-      &lt;p&gt;
-        Suspendisse mollis leo nec diam. Vestibulum pulvinar tellus sit amet nulla  
-        fringilla semper. Aenean aliquam, urna et accumsan sollicitudin, tellus  
-        pede lobortis velit, nec placerat dolor pede nec nibh. Donec fringilla. Duis  
-        adipiscing diam at enim. Vestibulum nibh.
-      &lt;/p&gt;  
-      &lt;p&gt;
-        Nulla facilisi. Aliquam dapibus leo eget leo. Etiam vitae turpis sit amet  
-        massa posuere cursus. Sed vitae justo quis tortor facilisis ultrices.  
-        Integer id erat. Donec at felis ut erat interdum vestibulum. Quisque et eros.  
-        Donec fringilla, est in condimentum venenatis, tortor velit vehicula sem, in  
-        elementum quam sapien eu lectus. In dolor urna, ullamcorper vel, tempor sit  
-        amet, semper ut, felis. Praesent nisi.
-      &lt;/p&gt;  
-      &lt;p&gt;
-        Fusce scelerisque viverra quam. Nam urna. Nullam urna libero, euismod at,  
-        euismod sit amet, porttitor ac, mauris.
-      &lt;/p&gt;  
-      &lt;p&gt;
-        Vestibulum interdum aliquet lacus. Vestibulum egestas. Fusce adipiscing  
-        quam sed metus.
-      &lt;/p&gt;  
-      &lt;p&gt;
-        Nullam dignissim aliquam dui. Proin laoreet, elit sed pulvinar  
-        sollicitudin, urna arcu fermentum felis, in rhoncus nunc neque vitae  
-        libero.
-      &lt;/p&gt;
-    &lt;/div&gt;
-</code></pre>
+h1, h2 {
+  color: #007e7e;
+}
 
-<p>Then "navigation":</p>
-<pre><code class="html">    &lt;div id=&quot;navigation&quot;&gt;  
-      &lt;ul&gt;  
-        &lt;li&gt;Mauris&lt;/li&gt;  
-        &lt;li&gt;Cras&lt;/li&gt;  
-        &lt;li&gt;Proin&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Curabitur&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Suspendisse&lt;/li&gt;  
-        &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ul&gt;  
-    &lt;/div&gt;
-</code></pre>
+h1 {
+  font-size: 150%;
+}
 
-<p>and finally "footer":</p>
-<pre><code class="html">    &lt;div id=&quot;footer&quot;&gt;
-      &lt;p&gt;
-        Proin quis orci eu erat molestie varius. Praesent condimentum  
-        orci in lectus. Ut ipsum. In hac habitasse platea dictumst.
-      &lt;/p&gt;
-    &lt;/div&gt;
-</code></pre>
-
-<p>Again, be careful to preserve the indentation. Verify that the home pages appearance has not changed. Finally, experiment with the folding nature of the eclipse editor.</p>
-<p>For instance, try collapsing everything in the page. This can be done by pressing all of the "-" signs in the left hand margin. Alternatively, if you bring the mouse into that margin and right click, the folding menu should be available (as we have seen).</p>
-<p>You may be able to generate a view something like this:</p>
-<p><img alt="" src="./img/01.png">
-<img alt="" src="./img/02.png">
-<img alt="" src="./img/03.png"></p>
-	  </section>
-	  <section data-tab="03" class="ui tab stacked moodle-book segment">
-	     <h1>Body syle</h1>
-<p>We already have an empty style sheet in place. However, it is not yet linked to our home page.</p>
-<p>Insert the following into the \&lt;head> element to tie in the sylesheet:</p>
-<pre><code class="html">    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;home.css&quot; media=&quot;screen&quot; /&gt;
-</code></pre>
-
-<p>Now lets try the following simple rule:</p>
-<pre><code class="css">body
-{
-  width: 80%;  
-  margin: 0 auto;
+h2 {
+  font-size:130%;
 }
 </code></pre>
 
-<p>Save, and refresh. The home page should now look like this:</p>
-<p><img alt="" src="./img/04.png"></p>
-<p>Remember the shortcut rules for CSS. The rule we have introduced is in fact a shorthand for :</p>
-<pre><code class="css">{
-  width: 80%;  
-  margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
+<p>Now edit the main index.html file, and link the stylesheet by inserting this into the <code>&lt;head&gt;</code> element:</p>
+<pre><code>    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;store.css&quot; media=&quot;screen&quot; /&gt;
 </code></pre>
 
-<p>Rules can be 'commented out' if you want them to be temporarily removed. Figure out the notation for commenting in CSS, and verify this by commenting out your existing rule, and replacing with this one.</p>
-<p>Additionally, discover the equivalent notations for html (quite different).</p>
-<p>This rule is stating that we want no top/bottom for the page, however auto for left and right is resizing the margins to be proportional to the container width (the browser window), and equal in size.</p>
-<p>The overall effect is a pleasing border on either size of the page, of equal size.</p>
-	  </section>
-	  <section data-tab="04" class="ui tab stacked moodle-book segment">
-	     <h1>Maincontent</h1>
-<p>We will now attempt to "float" the "maincontent" section to the right, with the "navigation" section hopefully moving in to the left.</p>
-<p>Try the following rule:</p>
-<pre><code class="css">#maincontent
-{  
-  float: right;  
-}
+<p>Make sure you save everything, and then refresh chrome. It should render a new style - something like this:</p>
+<p><img alt="" src="img/11.png"></p>
+<p>Do you notice that the directions page still seems to use the default fonts? This is because it is not linked to the stylesheet. Incorporate this now by this entry in the <code>&lt;head&gt;</code> element:</p>
+<pre><code>    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../store.css&quot; media=&quot;screen&quot; /&gt;
 </code></pre>
 
-<p>and inspect the results. There should be no change yet. This is because the maincontent section is wide enough to include the full space available. We can adjust this so that is consumes say 80% of the space:</p>
-<pre><code class="css">#maincontent
-{  
-  width: 80%;
-  float: right;  
-}
+<p>Verify that it now renders as expected:</p>
+<p><img alt="" src="img/12.png"></p>
+<p>Note carefully how the link slightly different to the previous one. Why is that?</p>
+    </div>
+    <div class="tab-pane fade" id="04">
+      <h1>Additional Content</h1>
+<p>Here is some additional content for the main index.page:</p>
+<pre><code>     &lt;h2&gt;Weekly Specials&lt;/h2&gt;
+     &lt;p&gt;
+       &lt;img src=&quot;images/paddle.png&quot; alt=&quot;Lemon Breeze Elixir&quot; /&gt;
+     &lt;/p&gt;
+     &lt;h3&gt;Mac Supercharge Bundle&lt;/h3&gt;
+     &lt;p&gt;
+       Its been a long time since the last free Mac bundle that big. StackSocial just published its so called Mac Freebie Bundle 2.0 which contains 10 apps worth 151$. Most of them are about design and have not been part of bundles before.
+     &lt;/p&gt;
+     &lt;img src=&quot;images/star35.gif&quot;&gt;
+     &lt;hr&gt;
+     &lt;p&gt;
+       &lt;img src=&quot;images/freebie.png&quot; alt=&quot;Mac Supercharge Bundle&quot; /&gt;
+     &lt;/p&gt;
+     &lt;h3&gt;Freebie&lt;/h3&gt;
+     &lt;p&gt;
+       Stacksocial just published its so called Free Ondesoft Mac Tool Bundle, which contains 5 apps from Ondesoft. The bundle worth $146 will be probably available only a couple of days so you’d better hurry up to get it.
+     &lt;/p&gt;
+
+     &lt;p&gt;
+       &lt;img src=&quot;images/ondesoft.jpg&quot; alt=&quot;Black Brain Brew Elixir&quot; /&gt;
+     &lt;/p&gt;
+     &lt;/p&gt;
+     &lt;img src=&quot;images/star45.gif&quot;&gt;
+     &lt;hr&gt;
+     &lt;h3&gt;Macware Business Bundle&lt;/h3&gt;
+     &lt;p&gt;
+       Here comes the next bundle for march. This time its macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%. There is n...
+     &lt;/p&gt;
+     &lt;img src=&quot;images/star40.gif&quot;&gt;
+     &lt;hr&gt;
+     &lt;p&gt;
+       See some other great deals 
+       &lt;a href=&quot;deals/index.html&quot; 
+          title=&quot;Deals&quot;&gt;here&lt;/a&gt;.
+     &lt;/p&gt;
+     &lt;p&gt;
+       2005, Bundle App Store&lt;br /&gt;
+       All trademarks and registered trademarks appearing on this site are 
+       the property of their respective owners.
+     &lt;/p&gt;
 </code></pre>
 
-<p>We are now starting to see the beginnings of a multicolumn layout:</p>
-<p><img alt="" src="./img/04.png"></p>
-<p>To get our bearings a bit better, lets introduce a border around the maincontent:</p>
-<pre><code class="css">#maincontent
-{  
-  width: 80%;
-  float: right;  
-  border: dashed thin;
-}
-</code></pre>
-
-<p>-</p>
-<p><img alt="" src="./img/05.png"></p>
-<p>As you can see, the "navigation" and "footer" sections have moved up to the left, slipping inside the maincontent. This is because these sections are currently obeying the default layout rules. In effect, they will be automatically resizing to fit the available space liberated by the 20% space of the \<body> that maincontent has liberated.</p>
-	  </section>
-	  <section data-tab="05" class="ui tab stacked moodle-book segment">
-	     <h1>Navigation</h1>
-<p>We can introduce a rule to definitively tie the navigation to 20% of the parent size. and float it left (also turning on a border so we can visualize it easier)</p>
-<pre><code class="css">#navigation
-{  
-  width: 20%;
-  float: left;  
-  border: dashed thin;
-}
-</code></pre>
-
-<p>This produces some alarming results:</p>
-<p><img alt="" src="./img/06.png"></p>
-<p>The width refers to the content, not padding and margins, so our true width exceeds the available space, so our navigation has been pushed below where we intended it to be.</p>
-<p>We can easily fix this with a little adjustment:</p>
-<pre><code class="css">#navigation
-{  
-  width: 18%;
-  float: left;  
-  border: dashed thin;
-}
-</code></pre>
-
-<p><img alt="" src="./img/07.png"></p>
-<p>Experiment with other percentages to get a feel for the layout behaviour</p>
-	  </section>
-	  <section data-tab="06" class="ui tab stacked moodle-book segment">
-	     <h1>Header, footer</h1>
-<p>We can now target the header and footer, and move them into place.</p>
-<p>First the header:</p>
-<pre><code class="css">#header
-{  
-  width: 100%;
-  border: dashed thin;
-}
-</code></pre>
-
-<p>This should not have any effect, as the header, being positioned first, is already in place but it will show a border.</p>
-<p>Now try the footer:</p>
-<pre><code class="css">#footer
-{  
-  width: 100%;
-  border: dashed thin;
-}
-</code></pre>
-
-<p>Save and refresh:</p>
-<p><img alt="" src="./img/08.png"></p>
-<p>Still not quite right.</p>
-<p>We would like to push the footer "clear" of any existing floated elements, and then for it to occupy the denoted size in that zone. This is accomplished with the "clear" property:</p>
-<pre><code class="css">#footer
-{  
-  width: 100%;
-  clear: both;
-  border: dashed thin;
-}
-</code></pre>
-
-<p>Setting clear to "both", means clear (move below) and blocks floated left or right.</p>
-<p>Refresh produces a pleasing result:</p>
-<p><img alt="" src="./img/09.png"></p>
-	  </section>
-	  <section data-tab="07" class="ui tab stacked moodle-book segment">
-	     <h1>Simplify</h1>
-<p>Our full CSS is now as follows:</p>
-<pre><code class="css">body
-{
-  width: 80%;  
-  margin: 0 auto;
-}
-
-#maincontent
-{  
-  width: 80%;
-  float: right;  
-  border: dashed thin;
-}
-
-#navigation
-{  
-  width: 18%;
-  float: left;  
-  border: dashed thin;
-}
-
-#header
-{
-  width: 100%;
-  border: dashed thin;
-}
-
-#footer
-{  
-  width: 100%;
-  clear: both;
-  border: dashed thin;
-}
-</code></pre>
-
-<p>Note the repeated border property. We introduced this property so that we could get a clearer view of our sections. Presumably we would like to remove it prior to production. However, this will mean deleting/commenting it out from every rule.</p>
-<p>This single property appears in every rule. We can create a new "wildcard" rule as follows:</p>
-<pre><code class="css">*
-{
-  border: dashed thin;
-}
-</code></pre>
-
-<p>Now, we can delete this from all of the other rules:</p>
-<pre><code class="css">body
-{
-  width: 80%;  
-  margin: 0 auto;
-}
-
-#maincontent
-{  
-  width: 80%;
-  float: right;  
-}
-
-#navigation
-{  
-  width: 18%;
-  float: left;  
-}
-
-#header
-{
-  width: 100%;
-}
-
-#footer
-{  
-  width: 100%;
-  clear: both;
-}
-</code></pre>
-
-<p>And when we want to remove the border, we can just delete that rule.</p>
-	  </section>
-	  <section data-tab="08" class="ui tab stacked moodle-book segment">
-	     <h1>Primary, secondary</h1>
-<p>We can also further subdivide sections within existing sections. The "maincontent" section currently contains 6 paragraphs:</p>
-<p><img alt="" src="./img/10.png"></p>
-<p>Using nesting, we can divide these into two sections:</p>
-<p><img alt="" src="./img/11.png"></p>
-<p>If we fold this carefully, we can see the following structure:</p>
-<p><img alt="" src="./img/12.png"></p>
-<p>As yet, this has no bearing on the display. However, two simple rules targeting these sections will layout these sections in two columns:</p>
-<pre><code class="css">#primary
-{  
-  width: 68%;  
-  float: left;  
-}
-
-#secondary
-{  
-  width: 30%;  
-  float: right;
-}
-</code></pre>
-
-<p>It should render as follows:</p>
-<p><img alt="" src="./img/14.png"></p>
-<p>If we comment out our wildcard rule:</p>
-<pre><code class="css">*
-{
-  //border: dashed thin;
-}
-</code></pre>
-
-<p>This is the final result:</p>
-<p><img alt="" src="./img/15.png"></p>
-	  </section>
-	  <section data-tab="Exercises" class="ui tab stacked moodle-book segment">
-	     <h1>Exercises</h1>
-<h3>Archive of Completed Lab:</h3>
+<p>Place this content directly into the page, just before the closing <code>&lt;body&gt;</code> tag. It should look like this:</p>
+<p><img alt="" src="img/13.png"></p>
+<p>Note that the images we have set up do'te seem to work - and are represented in chrome as broken image links.</p>
+<p>We can fix this now. Here is a zipped archive of all the images we will need:</p>
 <ul>
-<li><a href="./archives/lab03.zip">lab03.zip</a></li>
+<li><a href="archives/images.zip">images.zip</a></li>
 </ul>
-<h3>Navigation</h3>
-<p>Create a copy of home.html - and call it "page1.html". Keeping the other sections in tact, delete the content of the "primary" and "secondary" sections.</p>
-<p>Insert the following into "primary":</p>
-<pre><code class="html">       &lt;p&gt;
-          Phasellus non nibh ut lacus elementum pharetra. Vivamus sed orci ipsum.
-          Nulla sapien eros, euismod ac ornare sed, consectetur sed dui. Integer gravida
-          sem et turpis interdum in convallis eros placerat. Quisque auctor, velit sed
-          blandit pharetra, felis diam ultricies erat, vel aliquet neque risus non lacus.
-          Etiam non magna tortor, in rutrum augue. Donec nec enim ante, in tincidunt eros.
-          Aenean ultrices, ante non scelerisque eleifend, libero dolor rutrum justo,
-          vitae iaculis mi est id nisl. Nunc velit odio, luctus in imperdiet eget,
-          pulvinar ac quam. Nullam ipsum arcu, euismod vel congue quis, ullamcorper
-          sit amet massa. Vivamus et mauris ut ante sagittis sagittis quis eu velit.  
-        &lt;/p&gt;  
+<p>Download and expand this file - move/copy all the image files into a new <code>images</code> folder in your project. If all goes well, the a refresh of the browser should bring this:</p>
+<p><img alt="" src="img/14.png"></p>
+<p>Lets now bring in the `deals/index.html' content:</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=ISO-8859-1&quot; /&gt;
+    &lt;title&gt;App Bundle Deals&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;../store.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;More Deals&lt;/h1&gt;
+
+    &lt;h2&gt;Business Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/business.png&quot; alt=&quot;Business Bundle&quot; /&gt;
+        Here comes the next bundle for march. This time it's macware who publish a bundle. The so called macware Business Bundle contains 6 apps at a price of only $29.99 instead of $199.94. So you can save around 84%.
+    &lt;/p&gt;
+    &lt;h2&gt;Insanity Deal&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/insanity.jpg&quot; alt=&quot;Insanity Deal&quot; /&gt;
+        With the new $5 Insanity Deals from Bundlehunt you receive every day a highly reduced app for $5 only with savings up to 75%. Not a real bundle but, as there are multiple apps for only $5 each, one new per day, for the days to come.
+    &lt;/p&gt;
+    &lt;h2&gt;Summer Bundle&lt;/h2&gt;
+    &lt;p&gt;
+      &lt;img src=&quot;../images/summer.png&quot; alt=&quot;Summer Bundle&quot; /&gt;
+      The new bundle from StackCommerce contains quite a few apps which have never been in bundles before. The so called Summer Mac Essentials Bundle comes with 10 apps for only $19.99. That is 91% off the original price of $234!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href=&quot;../index.html&quot;&gt;Back to the Store&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
 
-<ul>
-<li>and into secondary, the following:</li>
-</ul>
-<pre><code class="html">        &lt;p&gt;
-          In faucibus turpis lacus, eget congue magna. Aenean vitae lacus sed mi pretium
-          porttitor suscipit sit amet ipsum. Suspendisse potenti. Nunc pharetra consectetur
-          est eget tempus. Aenean ac iaculis dui. Morbi volutpat rutrum urna vitae suscipit.
-          Vestibulum quam libero, lacinia id varius at, pharetra vitae metus. Proin sit amet
-          euismod dolor. Donec varius tempus libero, ut interdum libero accumsan nec. Duis
-          id lectus eu sapien dapibus rutrum sed id tellus. Praesent purus purus, adipiscing
-          non vehicula in, vehicula eget ligula. Suspendisse massa nibh, condimentum ut ornare
-          at, vulputate eu augue. Donec cursus ullamcorper facilisis.
-          In iaculis convallis elementum.
-        &lt;/p&gt;
-</code></pre>
+<p>This should render correctly first time, as we have the images already in place:</p>
+<p><img alt="" src="img/15.png"></p>
+<p>Look carefully at the paths to the images in the html source.</p>
+    </div>
+    <div class="tab-pane fade" id="05">
+      <h1></h1>
+    </div>
+    <div class="tab-pane fade" id="06">
+      <h1></h1>
+    </div>
+    <div class="tab-pane fade" id="07">
+      <h1></h1>
+    </div>
+    <div class="tab-pane fade" id="Exercises">
+      <h1></h1>
+    </div>
+</div>
+<br> <br>
 
-<p>Our navigation section is currently just a list (without links):</p>
-<pre><code class="html">   &lt;div id=&quot;navigation&quot;&gt;  
-    &lt;ul&gt;  
-        &lt;li&gt;Mauris&lt;/li&gt;  
-        &lt;li&gt;Cras &lt;/li&gt;  
-        &lt;li&gt;Proin&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Curabitur&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Suspendisse&lt;/li&gt;  
-        &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ul&gt;  
-    &lt;/div&gt;
-</code></pre>
 
-<p>This section is duplicated in both sections. Introduce hyper links into each, to provide rudimentary navigation:</p>
-<pre><code class="html">   &lt;div id=&quot;navigation&quot;&gt;  
-    &lt;ul&gt;  
-        &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt; Mauris &lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;Proin&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Curabitur&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Suspendisse&lt;/li&gt;  
-        &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ul&gt;  
-    &lt;/div&gt;
-</code></pre>
+    </div>
 
-<p>Save and reload - and you should see basic navigation between the two pages.</p>
-<h3>Multiple Pages</h3>
-<p>Create 2 more pages, with different primary/secondary content, and stitch them into the navigation across all page. You can generate some more content here:</p>
-<ul>
-<li><a href="http://www.lipsum.com">http://www.lipsum.com</a></li>
-</ul>
-<p>You might be interested in the background to this text here:</p>
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Lorem_ipsum">http://en.wikipedia.org/wiki/Lorem_ipsum</a></li>
-</ul>
-	  </section>
-<script>
 
-function addCaptions() {
-  var images = $(".moodle-book img");
-  jQuery.each(images, function(i)  {
-    if((images[i].alt).length > 0) 
-    {
-      var div_img = $(document.createElement("div")).addClass("ui segment");
-      $(images[i]).wrap(div_img);
-      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
-      div_label.append(images[i].alt);
-      $(div_label).insertBefore(images[i]);
-    }
-  });
-};
-
-// Need to check if we have already been loaded
-seen = 0;
+<div class="credits navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <small>
+    Prepared by Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
+    <a href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+        target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+    </a>
+    </small>
+</div>    <script>
 
 $(document).ready(function()
-{ 
-  if (seen == 0)
-  { 
-    // not loaded before - so do the restyling once (need to moodle book print)
-    $(".moodle-book img").addClass ("ui image");
-    $(".moodle-book pre").addClass ("ui segment");
-    addCaptions();
-    seen = 1;
-  }
+{
+  $("img").addClass ("img-responsive");
 
+  $(".tab-content img").each(function()
+  {
+    var title = this.alt;
+    $(this).after('<figcaption class="caption"> <em>'+ title +'</em></figcaption>');
+  });
+})    </script>
 
-})</script>
-  <br>  
-  <div class="ui fixed bottom borderless menu">'
-    <div class="ui small item"> 
-    <p id="footertext">
-    Prepared by  Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a  
-     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/" 
-       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-     </a>
-     </p>
-    </div>
-  </div>   
-    
-  <script>
-    $(document).ready(function()
-    {  
-      $('.tab-menu.menu .item').tab();
-    });
-  </script>   
   </body>
  </html>
