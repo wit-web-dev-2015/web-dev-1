@@ -100,6 +100,8 @@ h3
           <li><a href= "#06" data-toggle="tab"> 06 </a> </li>
           <li><a href= "#07" data-toggle="tab"> 07 </a> </li>
           <li><a href= "#08" data-toggle="tab"> 08 </a> </li>
+          <li><a href= "#09" data-toggle="tab"> 09 </a> </li>
+          <li><a href= "#10" data-toggle="tab"> 10 </a> </li>
           <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
       </ul>
     </div>
@@ -145,9 +147,8 @@ Put the following code into the page and save.</p>
 &lt;/html&gt;
 </code></pre>
 
-<p>This images needed for this page:</p>
-<p><img alt="" src="./img/business.png">
-<img alt="" src="./img/insanity.jpg"></p>
+<p>This image is needed for this page:</p>
+<p><img alt="" src="./img/business.png"></p>
 <p>View the page in the web browser. What is wrong with it?
 We wrote all of the href path's the same as we had before so why do they not work for the link and the images?
 If we are viewing the deals web page stored in the deals folder, does that folder contain the index.html file? No is the simple answer so our path is incorrect. We must tell the browser to move up a level in the directories in order to find those pages. Your paths's should be as below for each link and for each image. It is very important at this stage to understand this example as you need to be able to write correct paths to your files and images.</p>
@@ -519,6 +520,120 @@ p
 <p><img alt="" src="./img/06.png"></p>
     </div>
     <div class="tab-pane fade" id="08">
+      <h1>Popular Apps Paragraph</h1>
+<p>Locate the first list element for the most popular apps:</p>
+<pre><code class="html"> &lt;li&gt;&lt;img src=&quot;images/lightening.jpg&quot;/&gt;Strike I OGD  &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;&lt;/li&gt;
+</code></pre>
+
+<p>We would like to target this specific element with some custom styles. To this end, we nominate it to a 'class' called 'app':</p>
+<pre><code class="html">  &lt;li class=&quot;app&quot;&gt;&lt;img src=&quot;images/lightening.jpg&quot;/&gt;Strike I OGD  &lt;img src=&quot;images/star45.gif&quot; alt=&quot;4.5 stars&quot;&gt;&lt;/li&gt;
+</code></pre>
+
+<p>In our stylesheet, we can devise a rule just for this paragraph:</p>
+<pre><code class="css">.app
+{
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #000000;
+}
+</code></pre>
+
+<p>Reload and review the paragraph:</p>
+<p>We can see evidence of our targeted styles.</p>
+<p>We can add a little margin:</p>
+<pre><code class="css">.app
+{
+  /* as before */
+  margin: 30px;
+}
+</code></pre>
+
+<p>Reload the page:</p>
+<p><img alt="" src="./img/06.png"></p>
+<p>Next, the background image. Save this image here to your images folder:</p>
+<p><img alt="" src="./img/popular.jpg"></p>
+<p>...and we can extend the app rule with this property here:</p>
+<pre><code class="css">  background-image: url(images/popular.jpg) ;
+</code></pre>
+
+<p>This seems to yield a repeated pattern:</p>
+<p><img alt="" src="./img/10.png"></p>
+<p>Some further refinements can put a single image in the top right:</p>
+<pre><code class="css">  background-repeat: no-repeat;
+  background-position: top-left;
+</code></pre>
+
+<p>Reloading again:</p>
+<p><img alt="" src="./img/08.png"></p>
+<p>And we can also further refine the padding:</p>
+<pre><code class="css">  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+</code></pre>
+
+<p>Our full rule for app now looks like this:</p>
+<pre><code class="css">.app
+{
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #a7cece;
+
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-image: url(./images/background.gif);
+
+  background-repeat: no-repeat;
+  background-position: top-left;
+}
+</code></pre>
+
+<p>Some further adjustments to the text itself:</p>
+<pre><code class="css">  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;
+</code></pre>
+
+<p>-</p>
+<p><img alt="" src="./img/07.png"></p>
+<p>Finally, we might adjust the border itself again:</p>
+<pre><code class="css">  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+</code></pre>
+
+<p>Which turns out as:</p>
+<p><img alt="" src="./img/08.png"></p>
+<p>Regrouping the properties, this is the complete rule:</p>
+<pre><code class="css">.app
+{
+  border-color: white;
+  border-width: 1px;
+  border-style: dashed;
+
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-color: #a7cece;
+  background-image: url(./images/background.gif);
+  background-repeat: no-repeat;
+  background-position: top-left;
+
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;
+}
+</code></pre>
+    </div>
+    <div class="tab-pane fade" id="09">
       <h1>Coding Best Practices</h1>
 <p>We should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
 <p>Indentation is simply a consistent placement of spaces before each element, such that it flows in an ordered manner reflecting the opening/closing of tags. We prefer to use 2 spaces for each 'level'.</p>
@@ -568,6 +683,194 @@ p
 <p>It is likely that your indentation will not look like the below, so take the opportunity now to line up all elements consistently. This can be tedious, and there are tools to do this automatically, but do it manually for the moment.</p>
 <p><img alt="" src="./img/12.png"></p>
     </div>
+    <div class="tab-pane fade" id="10">
+      <h1>App card</h1>
+<p>Our challenge now is to make adjustments to the main panel on the index.html page that contains content relating to the New Games. We wish to move the panel to the right hand side of our page. Achieving this effect here:</p>
+<p><img alt="" src="./img/17.png"></p>
+<p>This will involve more significant surgery on the page itself in particular we will need to superimpose a structure on the page, grouping a whole set of elements into a new section.</p>
+<p>This section we call a 'Division' facilitated by the <code>&lt;div&gt;</code> tag. Add this div element to your apps.html page now.</p>
+<p><img alt="" src="./img/13.png"></p>
+<p>Note that once you introduce the div tag around the h2 and ul content you must ensure you maintain correct indentation.</p>
+<p>Once you have placed the div in your html file you can now target this division directly with the following rule in the CSS:</p>
+<pre><code class="css">.main_panel
+{
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+}
+</code></pre>
+
+<p>This establishes a suitable border (reload to see the effect). Now lets set the width:</p>
+<pre><code class="css">  width: 700px;
+</code></pre>
+
+<p>And lets further set the general dimensions:</p>
+<pre><code class="css">  padding-right: 20px;  
+  padding-left: 20px;
+  padding-bottom: 20px;
+</code></pre>
+
+<p>Set a margin:</p>
+<pre><code class="css">  margin-left: 20px;
+</code></pre>
+
+<p>and set the text more apropriately centered:</p>
+<pre><code class="css">  text-align: center;
+</code></pre>
+
+<p>Our full rule is now:</p>
+<pre><code class="css">.main_panel
+{
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  width: 700px;
+
+  padding-right: 20px;  
+  padding-left: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+  margin-left: 20px;
+
+}
+</code></pre>
+
+<p>CSS enable us to shorten the structure somewhat, particularly when setting related properties. So we can replace:</p>
+<pre><code class="css">  padding-right: 20px;  
+  padding-left: 20px;
+  padding-bottom 20px;
+</code></pre>
+
+<p>with</p>
+<pre><code class="css">  padding: 0px 20px 30px 10px;
+</code></pre>
+
+<p>Now add one more property to the same rule:</p>
+<pre><code class="css">  float: right;
+</code></pre>
+
+<p>Reload in browser view. This time something interesting happens the entire panel may 'float' to the right of the browser window:</p>
+<p>The actual appearance may vary depending on the browser window size.</p>
+<p>We still need to make some small adjustments so that our content is correctly aligned.</p>
+<p>First, we introduce a new division to encapsulate the navigation links of the home page:</p>
+<p><img alt="" src="./img/15.png"></p>
+<p>it is called 'navigation'. Then we introduce a rule in the CSS to target this area:</p>
+<pre><code>.navigation
+{
+  float:left;
+  width:800px;
+}
+</code></pre>
+
+<p><img alt="" src="./img/16.png"></p>
+<p>Although by no means complete particularly with the New Games showing on the right of the page.
+Your page should look like this:</p>
+<p><img alt="" src="./img/17.png"></p>
+<p>This is the complete stylesheet:</p>
+<pre><code class="css">body
+{
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size:small;
+  line-height: 1.6em;
+  background-color: silver;
+}
+
+h1, h2
+{
+  color: #007e7e;
+}
+
+h1
+{
+  font-size: 150%;
+}
+
+h2
+{
+  font-size: 130%;
+}
+
+p
+{
+ color: maroon;
+}
+.special
+{
+  color: red;
+}
+.main_panel
+{
+  border-width: thin;
+  border-style: solid;
+  border-color: #007e7e;
+  width: 700px;
+
+  padding: 0px 20px 30px 10px;
+
+  text-align: center;
+  margin-left: 20px;
+
+  float: right;
+
+}
+
+.app
+{
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+
+  width: 100px;
+  margin: 30px;
+  padding: 25px;
+  padding-left: 80px;
+  margin-right: 150px;
+
+  background-color: white;
+  background-image: url(images/popular.jpg);
+  background-repeat: no-repeat;
+  background-position: top-right;
+
+  line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, &quot;Times New Roman&quot;, Times, serif;
+  color: black;
+}
+.navigation
+{
+  float:left;
+  width:800px;
+}
+</code></pre>
+
+<p>...and this is the complete index.html:</p>
+<pre><code class="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;APP Store&lt;/title&gt;
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; media=&quot;screen&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src=&quot;images/score.png&quot;/&gt;
+    &lt;div class=&quot;navigation&quot;&gt;
+      &lt;h1&gt;Score: Apps, Movies, Music, Books&lt;/h1&gt;
+      &lt;ol&gt;
+        &lt;li&gt;&lt;a href=&quot;apps.html&quot;&gt;Apps&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;music.html&quot;&gt;Music&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;movies.html&quot;&gt;Movies&lt;/a&gt;&lt;/li&gt;
+      &lt;/ol&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;New Games&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;img src=&quot;images/delete.png&quot;/&gt;Clear All&lt;/li&gt;
+        &lt;li&gt;&lt;img src=&quot;images/google.jpg&quot;/&gt;Google Box&lt;/li&gt;
+        &lt;li&gt;&lt;img src=&quot;images/squink.jpg&quot;/&gt;Squinks&lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
     <div class="tab-pane fade" id="Exercises">
       <h1>Exercises</h1>
 <h2>Solution</h2>
@@ -576,23 +879,32 @@ p
 <li><a href="./archives/lab02.zip">lab02.zip</a></li>
 </ul>
 <h2>Exercise 1</h2>
-<p>In this lab you have experimented with colours, font-family, sizes and line heights.
-Apply what you have learnt to the directions page in your web site.</p>
+<p>In this lab you have experimented with classes:</p>
+<ul>
+<li><a href="http://reference.sitepoint.com/css/classselector">http://reference.sitepoint.com/css/classselector</a></li>
+</ul>
+<p>Classes are one type of selector, with others listed here:</p>
+<ul>
+<li><a href="http://reference.sitepoint.com/css">http://reference.sitepoint.com/css</a> (middle column)</li>
+</ul>
+<p>Review the description of classes, and then have a look at Id selectors:</p>
+<ul>
+<li><a href="http://reference.sitepoint.com/css/idselector">http://reference.sitepoint.com/css/idselector</a></li>
+</ul>
+<p>Where you are using Classes in this lab, try switching to using IDs</p>
 <h2>Exercise 2</h2>
-<p>Investigate on the mozilla site about the following properties:</p>
+<p>You might consider improving the look of the home and the apps pages using the CSS features we have just covered. For instance:</p>
 <ul>
-<li>background-color</li>
-<li>background-image</li>
-<li>text-align</li>
-<li>text-shadow</li>
-<li>text-decoration</li>
+<li>
+<p>Create a division on the home page which will contain the <code>&lt;h1</code>&gt; Score: Apps, Music, Books </p>
+</li>
+<li>
+<p>Name this division appropriately (perhaps header) and try styling it.</p>
+</li>
+<li>
+<p>Create another division for the binary numbers image <code>&lt;img</code>&gt;. See if you can mimic the CSS rules we just deployed to move the image into a right hand column. To do this consider what width you would like the header division to utilise and how much the image?</p>
+</li>
 </ul>
-<p>How might you apply them to your website?</p>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a></li>
-</ul>
-<h2>Exercise 3</h2>
-<p>Attempt freeCodeCamp sections 8 through 13 to practice what you have learned in the lab.    </p>
     </div>
 </div>
 <br> <br>
