@@ -7,11 +7,12 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-     <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
 
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
@@ -45,7 +46,7 @@ figcaption
 
   <body>
 
-    <div class="container">
+  <div class="ui container">
 <style>
 
 
@@ -80,42 +81,55 @@ h3
 
 </style>
 
-<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-      <div class="navbar-brand">
-        <a onclick="window.history.back()" href="#"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
-        Introducing CSS
-      </div>
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+      Introducing CSS
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Lab-02">
+        Lab-02
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+      <a class="item" data-tab="08">
+        08
+      </a>
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href= "#Lab-02" data-toggle="tab"> Lab-02 </a> </li>
-          <li><a href= "#01" data-toggle="tab"> 01 </a> </li>
-          <li><a href= "#02" data-toggle="tab"> 02 </a> </li>
-          <li><a href= "#03" data-toggle="tab"> 03 </a> </li>
-          <li><a href= "#04" data-toggle="tab"> 04 </a> </li>
-          <li><a href= "#05" data-toggle="tab"> 05 </a> </li>
-          <li><a href= "#06" data-toggle="tab"> 06 </a> </li>
-          <li><a href= "#07" data-toggle="tab"> 07 </a> </li>
-          <li><a href= "#08" data-toggle="tab"> 08 </a> </li>
-          <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 <br><br>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="Lab-02">
+  <div  class="ui tab segment lab" data-tab="Lab-02">
     <h1>Objectives</h1>
 <p>In this lab we will begin a new project which will have CSS stylesheet from the beginning. We will explore some of the basic features of CSS, including colours, font and interesting techniques for setting styles across entire sections of a page.</p>
   </div>
-
-    <div class="tab-pane fade" id="01">
-      <h1>Setup</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Setup</h1>
 <h2>Files for Lab02</h2>
 <p>For some of the labs, we would like to build on a foundation established from the previous weeks work. However, we might find it useful to keep the project separate, so the earlier labs are preserved as we left them (in case we wish to revert to them). Normally this would be the task of a revision control system such as git or subversion. For the moment we will just duplicate the projects</p>
 <p>You should have the files created from last week. If you do then make a copy of the Lab1 folder and name the new copy Lab2.</p>
@@ -176,9 +190,9 @@ If we are viewing the deals web page stored in the deals folder, does that folde
 </code></pre>
 
 <p>On the index.html page add a link to the deals.html page. Test the link to make sure you have written the path correctly.</p>
-    </div>
-    <div class="tab-pane fade" id="02">
-      <h1>CSS Inheritance</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>CSS Inheritance</h1>
 <p>Currently our CSS file looks like this:</p>
 <pre><code class="css">h1, h2
 {
@@ -230,9 +244,9 @@ h1
 </code></pre>
 
 <p>Have a close look at the resulting page. What type of font is used by the headings? What type for the paragraphs? Can you explain the difference? Comment out the body font rule again (as we did above). What is the effect?</p>
-    </div>
-    <div class="tab-pane fade" id="03">
-      <h1>CSS Classes</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>CSS Classes</h1>
 <p>Open the deals.html file.</p>
 <p>How would we style each heading 2 separately so that each bundle has a different colour text? Styling the <code>&lt;h2&gt;</code> element means that all <code>&lt;h2&gt;</code> elements are styled in the same way. We can define a class of elements, and then apply styles to any element that belongs to that class.</p>
 <p>Go to the first h2 which holds the business bundle. This text we want to display as red. Add an attribute called class, with an id "special" to the <code>&lt;h2&gt;</code> element as below:</p>
@@ -303,9 +317,9 @@ p
   color: red;
 }
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="04">
-      <h1>Fonts</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Fonts</h1>
 <h3>Font families</h3>
 <p>Each font family contains a set of fonts that share common characteristics. There are five font familys: sans-serif, serif, monospace, cursive, and fantasy. Each family includes a large set of fonts. Fonts are not consistently available from one computer to another. The available fonts depends on the operating system as well as the fonts and applications that a user has installed. Here's a an example of how to use font-family:</p>
 <pre><code class="css">body
@@ -389,9 +403,9 @@ h2
 </code></pre>
 
 <p>Experiment with changing the headings for the web site so that the bold is changed to normal weight. Add the rule to your CSS file and reload the web site. Once you have seen the difference in the headings, change it back to bold.</p>
-    </div>
-    <div class="tab-pane fade" id="05">
-      <h1>Colours</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Colours</h1>
 <p>Web colours are specified in terms of how much red, green, and blue make up the colour. You specify the amount of each colour from 0 to 100% and then add them all together to arrive at a final colour.</p>
 <p>You can use the names of colours, but CSS defines the names of only 17 colours. That number limits the expressiveness of your pages. By specifying colours in red, green and blue, you can have access to sixteen million colours.</p>
 <h2>Specifying Colour using colour names</h2>
@@ -428,9 +442,9 @@ h2
 
 <p>Try out these colours on the web site. </p>
 <p>We would like to keep the silver colour for the background of this website.</p>
-    </div>
-    <div class="tab-pane fade" id="06">
-      <h1>Font &amp; Colour CSS</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Font &amp; Colour CSS</h1>
 <p>In your current style.css, change your CSS file so it now contains the following:</p>
 <pre><code class="css">body
 {
@@ -475,9 +489,9 @@ p
 
 <p>This property allows us to specify the line height between each line. Like other font-related properties, you can specify the height in pixels, or using an em or percentage value that's relative to the font size. Save your CSS file and reload your web pages to see the change.</p>
 <p>Try a few different line heights like 200%, .5em, and 20px to see the effect. Change the height back to 1.6em when you are finished.</p>
-    </div>
-    <div class="tab-pane fade" id="07">
-      <h1>More Content</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>More Content</h1>
 <p>We will rework the apps.html  page with some more content to illustrate some interesting CSS rules. Replace the first paragraph with the following content:</p>
 <pre><code class="html">  &lt;!DOCTYPE HTML&gt;
 &lt;html&gt;
@@ -517,9 +531,9 @@ p
 <p>Save these files to your computer. To do this, right click on each one in turn and select save as. Then you can drag and drop them directly into the images folder in your lab02 folder.</p>
 <p>If all this goes according to plan,  the app page should now look something like this:</p>
 <p><img alt="" src="./img/06.png"></p>
-    </div>
-    <div class="tab-pane fade" id="08">
-      <h1>Coding Best Practices</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="08">
+    <h1>Coding Best Practices</h1>
 <p>We should carefully inspect our html and verify that we are laying it out correctly, and in particular that we are obeying consistent indentation rules in the structure of the html itself.</p>
 <p>Indentation is simply a consistent placement of spaces before each element, such that it flows in an ordered manner reflecting the opening/closing of tags. We prefer to use 2 spaces for each 'level'.</p>
 <h3>Example Inconsistent indentation:</h3>
@@ -567,9 +581,9 @@ p
 <p><img alt="" src="./img/11.png"></p>
 <p>It is likely that your indentation will not look like the below, so take the opportunity now to line up all elements consistently. This can be tedious, and there are tools to do this automatically, but do it manually for the moment.</p>
 <p><img alt="" src="./img/12.png"></p>
-    </div>
-    <div class="tab-pane fade" id="Exercises">
-      <h1>Exercises</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Exercises">
+    <h1>Exercises</h1>
 <h2>Solution</h2>
 <p>This is a solution to the lab:</p>
 <ul>
@@ -593,31 +607,45 @@ Apply what you have learnt to the directions page in your web site.</p>
 </ul>
 <h2>Exercise 3</h2>
 <p>Attempt freeCodeCamp sections 8 through 13 to practice what you have learned in the lab.    </p>
+  </div>
+<script>
+$('.ui.menu .item')
+  .tab({
+    history: true,
+    historyType: 'hash'
+  })
+;
+</script>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
     </div>
-</div>
-<br> <br>
-
-
-    </div>
-
-
-<div class="credits navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <small>
-    Prepared by Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
-    <a href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-        target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-    </a>
-    </small>
-</div>    <script>
+  </div>    <script>
 
 $(document).ready(function()
 {
-  $("img").addClass ("img-responsive");
+  $("img").addClass ("ui image");
 
-  $(".tab-content img").each(function()
-  {
-    var title = this.alt;
-    $(this).after('<figcaption class="caption"> <em>'+ title +'</em></figcaption>');
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
   });
 })    </script>
 

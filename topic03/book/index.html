@@ -7,11 +7,12 @@
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-     <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
 
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
@@ -45,7 +46,7 @@ figcaption
 
   <body>
 
-    <div class="container">
+  <div class="ui container">
 <style>
 
 
@@ -80,46 +81,55 @@ h3
 
 </style>
 
-<div class="navbar navbar-default navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a>
-      <div class="navbar-brand">
-        <a onclick="window.history.back()" href="#"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
-         More CSS
-      </div>
+<div class="ui fixed top pointing inverted menu labmenu">
+  <header class="header item">
+    <a href="../index.html">
+      <i class="sitemap icon"></i>
+       More CSS
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    <a class="active item" data-tab="Lab-03">
+        Lab-03
+    </a>
+      <a class="item" data-tab="01">
+        01
+      </a>
+      <a class="item" data-tab="02">
+        02
+      </a>
+      <a class="item" data-tab="03">
+        03
+      </a>
+      <a class="item" data-tab="04">
+        04
+      </a>
+      <a class="item" data-tab="05">
+        05
+      </a>
+      <a class="item" data-tab="06">
+        06
+      </a>
+      <a class="item" data-tab="07">
+        07
+      </a>
+      <a class="item" data-tab="08">
+        08
+      </a>
+      <a class="item" data-tab="Exercises">
+        Exercises
+      </a>
     </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href= "#Lab-03" data-toggle="tab"> Lab-03 </a> </li>
-          <li><a href= "#01" data-toggle="tab"> 01 </a> </li>
-          <li><a href= "#02" data-toggle="tab"> 02 </a> </li>
-          <li><a href= "#03" data-toggle="tab"> 03 </a> </li>
-          <li><a href= "#04" data-toggle="tab"> 04 </a> </li>
-          <li><a href= "#05" data-toggle="tab"> 05 </a> </li>
-          <li><a href= "#06" data-toggle="tab"> 06 </a> </li>
-          <li><a href= "#07" data-toggle="tab"> 07 </a> </li>
-          <li><a href= "#08" data-toggle="tab"> 08 </a> </li>
-          <li><a href= "#Exercises" data-toggle="tab"> Exercises </a> </li>
-      </ul>
-    </div>
-  </div>
 </div>
 
 <br><br>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="Lab-03">
+  <div  class="ui tab segment lab" data-tab="Lab-03">
     <h1>CSS Design</h1>
-<p>In this lab we will work towards developing this site here:</p>
-<ul>
-<li><a href="archives/lab03/index.html">Lab03</a></li>
-</ul>
-<p>This is an ambitious use of CSS, which we will be exploring over the next few labs/lectures.</p>
+<p>In this lab we will work towards developing a site with a more ambitious use of CSS. In particular, tbe box model will be used to achieve a more professional user experience.</p>
   </div>
-
-    <div class="tab-pane fade" id="01">
-      <h1>Setup</h1>
+  <div  class="ui tab segment lab" data-tab="01">
+    <h1>Setup</h1>
 <p>This week we wil start a new project, but we will NOT copy over any material from last week - but rather start with a blank slate.</p>
 <p>Open Sublime text editor - and open the <code>directory</code> containing your web development projects (this folder is called <code>web-prj</code> below):</p>
 <p><img alt="" src="img/00.png"></p>
@@ -163,9 +173,9 @@ h3
 <p>There are alternative colour schemes - for instance 'Solarised Light':</p>
 <p><img alt="" src="img/06.png"></p>
 <p>These are available via the <code>Preferences</code> menu.</p>
-    </div>
-    <div class="tab-pane fade" id="02">
-      <h1>Main page</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="02">
+    <h1>Main page</h1>
 <h2>lab03/index.html</h2>
 <p>Open the main index.html page and replace the template contents with the following:</p>
 <pre><code>&lt;!DOCTYPE html&gt;
@@ -271,9 +281,9 @@ h3
 <p>To reproduce the above, first close the <code>source</code> view we just opened above, and proceed to access the tools as shown here:</p>
 <p><img alt="" src="img/10.png"></p>
 <p>Explore the developer tools for a little while - notice how the <code>box model</code> seems to be visible. Then close it, we will return to it later.</p>
-    </div>
-    <div class="tab-pane fade" id="03">
-      <h1>Style Sheet</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Style Sheet</h1>
 <p>Our first step will be to include a style sheet. Create a file called 'store.css' and include the following:</p>
 <pre><code>body {
   font: small/1.6em Verdana, Helvetica, Arial, sans-serif;
@@ -305,9 +315,9 @@ h2 {
 <p>Verify that it now renders as expected:</p>
 <p><img alt="" src="img/12.png"></p>
 <p>Note carefully how the link slightly different to the previous one. Why is that?</p>
-    </div>
-    <div class="tab-pane fade" id="04">
-      <h1>Additional Content</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Additional Content</h1>
 <p>Here is some additional content for the main index.page:</p>
 <pre><code>    &lt;h2&gt;Weekly Specials&lt;/h2&gt;
     &lt;hr&gt;
@@ -400,9 +410,9 @@ h2 {
 <li>deals/index.html</li>
 </ul>
 <p>(the link to 'deals' is at the very end of the main page)</p>
-    </div>
-    <div class="tab-pane fade" id="05">
-      <h1>Guarantee Paragraph</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="05">
+    <h1>Guarantee Paragraph</h1>
 <p>Locate the 'guarantee' paragraph in the home page (the third paragraph):</p>
 <pre><code class="html">    &lt;p&gt;
       Our guarantee: at the store, we're committed to 
@@ -532,9 +542,9 @@ h2 {
   color: black;
 }
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="06">
-      <h1>Folding View in Sublime</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Folding View in Sublime</h1>
 <p>Your editor may look like this currently:</p>
 <p><img alt="" src="img/23.png"></p>
 <p>Now select the following menu option - <code>Edit-&gt;Code Folding-&gt;Fold All</code>:</p>
@@ -547,9 +557,9 @@ h2 {
 <p><img alt="" src="img/27.png">
 <img alt="" src="img/28.png"></p>
 <p>This can be challenging to effect - as the arrow will only appear when you hover in the correct column in the margin:</p>
-    </div>
-    <div class="tab-pane fade" id="07">
-      <h1>Sidebar</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="07">
+    <h1>Sidebar</h1>
 <p>Open the main index.html and locate the <code>Weekly Specials</code> heading. Place a new <code>&lt;div&gt;</code> element immediately before this element:</p>
 <pre><code>    &lt;div id=&quot;weeklyspecials&quot;&gt;
     &lt;h2&gt;Weekly Specials&lt;/h2&gt;
@@ -777,9 +787,9 @@ h2 {
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="08">
-      <h1>Floating Sections</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="08">
+    <h1>Floating Sections</h1>
 <p>The <code>&lt;div&gt;s</code> we have introduced have had no effect on the visual appearance of the main page - it should still look exactly as it did before we incorporated them:</p>
 <p>We can now target this division directly with the following new rules in CSS:</p>
 <pre><code class="css">#weeklyspecials {
@@ -861,9 +871,9 @@ h2 {
   width:70%;
 }
 </code></pre>
-    </div>
-    <div class="tab-pane fade" id="Exercises">
-      <h1>Exercise</h1>
+  </div>
+  <div  class="ui tab segment lab" data-tab="Exercises">
+    <h1>Exercise</h1>
 <p>This is the final version of the project:</p>
 <ul>
 <li><a href="archives/lab03.zip">lab03</a></li>
@@ -896,31 +906,45 @@ h2 {
 <ul>
 <li><a href="https://developer.mozilla.org/en/docs/Web/CSS/border">https://developer.mozilla.org/en/docs/Web/CSS/border</a></li>
 </ul>
+  </div>
+<script>
+$('.ui.menu .item')
+  .tab({
+    history: true,
+    historyType: 'hash'
+  })
+;
+</script>
+   </div>
+
+
+
+  <br><br>
+  <div class="ui bottom fixed borderless menu">
+    <div class="ui small item">
+    <p id="footertext">
+    Prepared by  Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
+     <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+       target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
+     </a>
+     </p>
     </div>
-</div>
-<br> <br>
-
-
-    </div>
-
-
-<div class="credits navbar navbar-default navbar-fixed-bottom" role="navigation">
-  <small>
-    Prepared by Eamonn De Leastar (edeleastar@wit.ie) Dr. Brenda Mullally (bmullally@wit.ie). Except where otherwise noted, this content is licensed under a
-    <a href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-        target="_blank">Creative Commons Attribution-NonCommercial 4.0 License
-    </a>
-    </small>
-</div>    <script>
+  </div>    <script>
 
 $(document).ready(function()
 {
-  $("img").addClass ("img-responsive");
+  $("img").addClass ("ui image");
 
-  $(".tab-content img").each(function()
-  {
-    var title = this.alt;
-    $(this).after('<figcaption class="caption"> <em>'+ title +'</em></figcaption>');
+  var images = $(".lab img");
+  jQuery.each(images, function(i)  {
+    if((images[i].alt).length > 0)
+    {
+      var div_img = $(document.createElement("div")).addClass("ui segment");
+      $(images[i]).wrap(div_img);
+      var div_label = $(document.createElement("div")).addClass("ui ribbon teal top attached label");
+      div_label.append(images[i].alt);
+      $(div_label).insertBefore(images[i]);
+    }
   });
 })    </script>
 
