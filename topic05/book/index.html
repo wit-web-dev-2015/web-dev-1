@@ -117,7 +117,6 @@ h3
 
   <div  class="ui tab segment lab" data-tab="Lab-05">
     <h1>Objectives</h1>
-<<<<<<< HEAD
 <p>Restructure the output of the last lab to participate in a tabbed navigation structure. Do this by introducing a simple tabbed design into the site to provide the user with the visual metaphor for navigation. We then 'wire-up' these tabs to lead the user through the site. We will do this twice: once for the example content we laid out in last weeks lab. Then we will apply this to the app store site, using the same CSS rules.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="01">
@@ -134,47 +133,13 @@ h3
 </ul>
 <p>Download and expand the zip file above, or alternatively in your browser, you can select 'save link as' or equivalent and save these into your own workstation. To do this you will first have to locate the actual folder in which the lab05 project is stored, save the four files into that folder.</p>
 <p>Either way, we wish to use the above as the basis for this lab.</p>
-=======
-<p>Restructure the output of the last lab to participate in a tabbed navigation structure, and then produce a simple application mockup using these techniques. Do this by introducing a simple tabbed design into the site to provide the user with the visual metaphor for navigation. We then 'wire-up' these tabs to lead the user through the site. We will do this twice: once for the example content we laid out in last weeks lab. Then we will apply this to the app store site, using the same CSS rules.</p>
-  </div>
-  <div  class="ui tab segment lab" data-tab="01">
-    <h1>Setup</h1>
-<p>Copy your lab04 folder and name the copy lab05. Your lab05 folder should look something like this:</p>
-<p><img alt="" src="./img/01.png"></p>
-<p>If you dont have lab04 completed (with the exercises), these are the four files we generated in that project:</p>
-<ul>
-<li>
-<p><a href="./archives/1.basicnav/home.html">home.html</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/home.css">home.css</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/page1.html">page1.html</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/page2.html">page2.html</a></p>
-</li>
-</ul>
-<p>In your browser, you can select 'save link as' or equivalent and save these into your own workstation. To do this you will first have to locate the actual folder in which the lab05 project is stored, save the four files into that folder.</p>
-<p>Alternatively, just save to the desktop and drag/drop into the sublime project folder.</p>
-<p>Or here is the complete zip file</p>
-<ul>
-<li><a href="./archives/lab04 - incl-exercises.zip">lab04 - incl-exercises.zip</a></li>
-</ul>
-<p>For the remainder of this lab, we will work away in lab05 project.</p>
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
   </div>
   <div  class="ui tab segment lab" data-tab="02">
     <h1>Navigation</h1>
 <p>On a web page the navigation can be thought of as the table of contents. You expect the table of contents to direct you to the content you want to access.</p>
 <p>In this lab we will create a tabbed navigation section that will look like this:</p>
 <p><img alt="" src="./img/08.png"></p>
-<<<<<<< HEAD
 <p>In HTML the element that best suits a table of contents is the <code>&lt;ol</code>&gt; element.  We will use the ordered list to construct the navigation section of the web page.</p>
-=======
-<p>In HTML the element that best suits a table of contents is the <code>&lt;ol</code>&gt; element. There is also the <code>&lt;ul</code>&gt; unordered list which you could use if your navigation doesn't have a defined order. We will use the ordered list to construct the navigation section of the web page.</p>
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
 <p>Here's the code we have already in our web page:</p>
 <pre><code>     &lt;div id=&quot;navigation&quot;&gt;  
       &lt;ol&gt;  
@@ -233,7 +198,6 @@ You can see that the image has two parts, the first top row will be used for non
   <div  class="ui tab segment lab" data-tab="04">
     <h1>CSS rules</h1>
 <p>The first thing we'll do is to style the ordered list that represents our menu:</p>
-<<<<<<< HEAD
 <p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 At the moment our navigation is set to be 20%, if we want our navigation to show as a horizontal set of tabs we need that percentage to change.</p>
 <p>Edit your css file so it shows:</p>
@@ -261,33 +225,10 @@ Next add the following rule to the home.css file:
 </code></pre>
 
 <p>ol#menu {
-=======
-<p>In your home.html file add the following id to the <code>&lt;ol</code>&gt; element:</p>
-<pre><code>
-  &lt;div id=&quot;navigation&quot;&gt;  
-      &lt;ol id=&quot;menu&quot;&gt;  
-        &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;Curabitur&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Suspendisse&lt;/li&gt;  
-        &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ol&gt;  
-  &lt;/div&gt;
-
-</code></pre>
-
-<p>Next add the following rule to the home.css file:</p>
-<pre><code>
-ol#menu {
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
     height: 2em;
     list-style: none;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
 }</p>
 <pre><code>
 
@@ -304,22 +245,10 @@ Next we'll style the default state for each list item (tab) inside the menu:
 </code></pre>
 
 <p>ol#menu li {
-=======
-}
-
-</code></pre>
-
-<p>So, what's happening here? We are setting the height of the menu (which will be our bar of tabs) to 2 em units (which is twice the height of the current font.) In most browsers, this is automatically calculated because all the list items (tabs) will be 2 em units in height.</p>
-<p>Then we removed the numbers next to the list by removing its list style.</p>
-<p>The margin and padding are both set to 0 to avoid any spacing inside and outside the list. </p>
-<p>Next we'll style the default state for each list item (tab) inside the menu:</p>
-<pre><code>ol#menu li {
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
     background: url(tabs.gif);
     float: left;
     margin: 0 1px 0 0;
     padding-left: 10px;
-<<<<<<< HEAD
 }</p>
 <pre><code>
 
@@ -357,20 +286,6 @@ Here we can see the background image appear for each list item however our list 
 }
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
 <pre><code>=======
-=======
-}
-</code></pre>
-
-<p>In this rule we set margin to be  0 1px 0 0; this means the same as margin-top: 0; margin-right: 1px; margin-bottom: 0; margin-left: 0;. We reset all margins of the tab because some browsers give the <code>&lt;li</code>&gt; element a margin by default. The 1 pixel to the right leaves a tiny gap between the tabs. You can adjust this value to your liking.</p>
-<p>Last, but not least, we set the left padding to 10 pixels. This is an important value which depends on the tab image. It has to be at least as wide as the left part of the tab. Without the padding, the left part will be covered by the background image of the <code>&lt;a</code>&gt; element. </p>
-<p><img alt="" src="./img/03.png"></p>
-<p>Here we can see the background image appear for each list item however our list items are not in a row. They are floating left but we want them accross the top of the maincontent. We need to change the size of the navigation div so it is 100% of it's container.</p>
-<pre><code>#navigation
-{  
-  width: 100%;
-  float: left;  
-}
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
 </code></pre>
 
 <p>Next we deal with the <code>&lt;a</code>&gt; element nested in the <code>&lt;li</code>&gt; element.</p>
@@ -403,7 +318,6 @@ Here we can see the background image appear for each list item however our list 
 <p>We give the element a line height because it's essentially the same as height (as long as the text stays on one line), with the difference that it is vertically centered.</p>
 <p>The padding to the right should be just as much as it was for the <code>&lt;li</code>&gt; element, so that the text will be centered. If you want more spacing to the left and/or right, you modify the left padding in the <code>&lt;li</code>&gt; element and the right padding in this one.</p>
 <p><img alt="" src="./img/05.png"></p>
-<<<<<<< HEAD
 <blockquote>
 <blockquote>
 <blockquote>
@@ -419,8 +333,6 @@ Here we can see the background image appear for each list item however our list 
 </blockquote>
 </blockquote>
 </blockquote>
-=======
->>>>>>> 31ce18140a7422ea67102fadc8a5240a0ec41913
   </div>
   <div  class="ui tab segment lab" data-tab="05">
     <h1>Selected Tab</h1>
