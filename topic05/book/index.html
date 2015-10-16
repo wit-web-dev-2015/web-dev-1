@@ -121,40 +121,30 @@ h3
   </div>
   <div  class="ui tab segment lab" data-tab="01">
     <h1>Setup</h1>
-<p>Copy your lab04 folder and name the copy lab05. Your lab05 folder should look something like this:</p>
+<p>For this lab, start with the this project here:</p>
+<ul>
+<li><a href="./archives/lab05-starter.zip">lab05</a></li>
+</ul>
 <p><img alt="" src="./img/01.png"></p>
-<p>If you dont have lab04 completed (with the exercises), these are the four files we generated in that project:</p>
+<p>This archive contains the following pages:</p>
 <ul>
-<li>
-<p><a href="./archives/1.basicnav/home.html">home.html</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/home.css">home.css</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/page1.html">page1.html</a></p>
-</li>
-<li>
-<p><a href="./archives/1.basicnav/page2.html">page2.html</a></p>
-</li>
+<li><a href="./archives/1.basicnav/home.html">home.html</a></li>
+<li><a href="./archives/1.basicnav/home.css">home.css</a></li>
+<li><a href="./archives/1.basicnav/page1.html">page1.html</a></li>
+<li><a href="./archives/1.basicnav/page2.html">page2.html</a></li>
 </ul>
-<p>In your browser, you can select 'save link as' or equivalent and save these into your own workstation. To do this you will first have to locate the actual folder in which the lab05 project is stored, save the four files into that folder.</p>
-<p>Alternatively, just save to the desktop and drag/drop into the sublime project folder.</p>
-<p>Or here is the complete zip file</p>
-<ul>
-<li><a href="./archives/lab04 - incl-exercises.zip">lab04 - incl-exercises.zip</a></li>
-</ul>
-<p>For the remainder of this lab, we will work away in lab05 project.</p>
+<p>Download and expand the zip file above, or alternatively in your browser, you can select 'save link as' or equivalent and save these into your own workstation. To do this you will first have to locate the actual folder in which the lab05 project is stored, save the four files into that folder.</p>
+<p>Either way, we wish to use the above as the basis for this lab.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="02">
     <h1>Navigation</h1>
 <p>On a web page the navigation can be thought of as the table of contents. You expect the table of contents to direct you to the content you want to access.</p>
 <p>In this lab we will create a tabbed navigation section that will look like this:</p>
 <p><img alt="" src="./img/08.png"></p>
-<p>In HTML the element that best suits a table of contents is the <code>&lt;ol</code>&gt; element. There is also the <code>&lt;ul</code>&gt; unordered list which you could use if your navigation doesn't have a defined order. We will use the ordered list to construct the navigation section of the web page.</p>
+<p>In HTML the element that best suits a table of contents is the <code>&lt;ul</code>&gt; element - which are already using. We will use the ordered list to construct the navigation section of the web page.</p>
 <p>Here's the code we have already in our web page:</p>
-<pre><code>     &lt;div id=&quot;navigation&quot;&gt;  
-      &lt;ol&gt;  
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul&gt;  
         &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
         &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
         &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
@@ -163,17 +153,38 @@ h3
         &lt;li&gt;Integer&lt;/li&gt;  
         &lt;li&gt;Suspendisse&lt;/li&gt;  
         &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ol&gt;  
+      &lt;/ul&gt;  
     &lt;/div&gt;
-
-
 </code></pre>
 
-<p>What we have is an item for each link to a page.
-Next we want to ensure our navigation tells the user which page they are currently viewing. We do this by added a class attribute to the appropriate list item. So if we edit the home.html page first we want to add the class attribute "current" to the first list item (Mauris) as below:</p>
-<pre><code>
-&lt;div id=&quot;navigation&quot;&gt;  
-      &lt;ol&gt;  
+<p>What we have is an item for each link to a page.</p>
+<p>Next we want to ensure our navigation tells the user which page they are currently viewing. We do this by added a class attribute to the appropriate list item. So if we edit the home.html page first we want to add the class attribute "current" to the first list item (Mauris) as below:</p>
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul&gt;  
+        &lt;li class=&quot;current&quot;&gt; &lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
+        &lt;li&gt;Curabitur&lt;/li&gt;  
+        &lt;li&gt;Integer&lt;/li&gt;  
+        &lt;li&gt;Suspendisse&lt;/li&gt;  
+        &lt;li&gt;Quisque&lt;/li&gt;  
+      &lt;/ul&gt;  
+    &lt;/div&gt;
+</code></pre>
+
+<p>We must also do this for page1, 2 and 3. So for page1.html add the class attribute "current" to the second list item (Cras). For page2.html add it to the third list item (Proin) and for page3.html add it to the fourth list item (Integer)</p>
+<p>When viewing out web pages this makes no visible difference as all we are doing is identifying those elements we will no go on to style in a particular way.</p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="03">
+    <h1>Forming the Tab</h1>
+<p>Make sure the 'navigation' division is located towards the top of the page structure between the header and the maincontent. (If you copied the output of last weeks lab, it will be near the end) If we were to take a view of any of the pages using the folding feature if eclipse, we would like to see this:</p>
+<p><img alt="" src="./img/02.png"></p>
+<p>There are several methods for creating nice navigation on your site, the method we teach in this lab is a pure CSS method using different background colour for 'tabs' on the navigation menu.</p>
+<p>Before you go any further make sure your site is 'navigable' without any broken links.</p>
+<p>Next we are going to mark each of <code>&lt;ul&gt;</code> elements with a new id <code>menu</code>:</p>
+<pre><code>    &lt;div id=&quot;navigation&quot;&gt;  
+      &lt;ul id=&quot;menu&quot;&gt;  
         &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
         &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
         &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
@@ -182,78 +193,13 @@ Next we want to ensure our navigation tells the user which page they are current
         &lt;li&gt;Integer&lt;/li&gt;  
         &lt;li&gt;Suspendisse&lt;/li&gt;  
         &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ol&gt;  
+      &lt;/ul&gt;  
     &lt;/div&gt;
-
 </code></pre>
 
-<p>We must also do this for page1 2 and 3. So for page1.html add the class attribute "current" to the second list item (Cras). For page2.html add it to the third list item (Proin) and for page3.html add it to the fourth list item (Integer)</p>
-<p>When viewing out web pages this makes no visible difference as all we are doing is identifying those elements we will no go on to style in a particular way.</p>
-  </div>
-  <div  class="ui tab segment lab" data-tab="03">
-    <h1>The Image</h1>
-<p>Make sure the 'navigation' division is located towards the top of the page structure between the header and the maincontent. (If you copied the output of last weeks lab, it will be near the end) If we were to take a view of any of the pages using the folding feature if eclipse, we would like to see this:</p>
-<p><img alt="" src="./img/02.png"></p>
-<p>There are several methods for creating nice navigation on your site, the method we teach in this lab is a pure CSS method using one image for the tabs on the navigation menu. It is possible to use multiple images however:</p>
-<ul>
-<li>Each image has a header section. The filesize of six small images would be about twice as big as the filesize of one big image.</li>
-<li>Each image requires its own HTTP request. This wastes both bandwidth and server processing time. Due to the images being requested separately this also means that the page will take longer to load, especially if the user's browser downloads the files one by one.</li>
-<li>There is no way to apply the method used here with more than two images for one tab, since each tab consists of only two elements (<code>&lt;li</code>&gt; and <code>&lt;a</code>&gt;) and only one background image can be applied to an element.</li>
-</ul>
-<p>There are two states for each tab, selected and not selected.</p>
-<p>Each state will take up one row of the image and will be 500 pixels wide.</p>
-<p>This is the image here:</p>
-<p><img alt="" src="./img/tabs.gif"></p>
-<p>Save this image into your Lab05 folder. For this lab it is the only image we will use so no need to create an images folder.
-You can see that the image has two parts, the first top row will be used for non selected tabs, the second lower row will be used for the selected tab. The image also has curved corners left and right. This is important and impacts how we write our CSS so that each tab has a curve left and right regardless of the size of the tab.</p>
-  </div>
-  <div  class="ui tab segment lab" data-tab="04">
-    <h1>CSS rules</h1>
-<p>The first thing we'll do is to style the ordered list that represents our menu:</p>
-<p>In your home.html file add the following id to the <code>&lt;ol</code>&gt; element:</p>
-<pre><code>
-  &lt;div id=&quot;navigation&quot;&gt;  
-      &lt;ol id=&quot;menu&quot;&gt;  
-        &lt;li&gt;&lt;a href=&quot;home.html&quot;&gt;Mauris&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page1.html&quot;&gt; Cras &lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page2.html&quot;&gt;Proin&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;&lt;a href=&quot;page3.html&quot;&gt;Integer&lt;/a&gt;&lt;/li&gt;  
-        &lt;li&gt;Curabitur&lt;/li&gt;  
-        &lt;li&gt;Integer&lt;/li&gt;  
-        &lt;li&gt;Suspendisse&lt;/li&gt;  
-        &lt;li&gt;Quisque&lt;/li&gt;  
-      &lt;/ol&gt;  
-  &lt;/div&gt;
-
-</code></pre>
-
-<p>Next add the following rule to the home.css file:</p>
-<pre><code>
-ol#menu {
-    height: 2em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-</code></pre>
-
-<p>So, what's happening here? We are setting the height of the menu (which will be our bar of tabs) to 2 em units (which is twice the height of the current font.) In most browsers, this is automatically calculated because all the list items (tabs) will be 2 em units in height.</p>
-<p>Then we removed the numbers next to the list by removing its list style.</p>
-<p>The margin and padding are both set to 0 to avoid any spacing inside and outside the list. </p>
-<p>Next we'll style the default state for each list item (tab) inside the menu:</p>
-<pre><code>ol#menu li {
-    background: url(tabs.gif);
-    float: left;
-    margin: 0 1px 0 0;
-    padding-left: 10px;
-}
-</code></pre>
-
-<p>In this rule we set margin to be  0 1px 0 0; this means the same as margin-top: 0; margin-right: 1px; margin-bottom: 0; margin-left: 0;. We reset all margins of the tab because some browsers give the <code>&lt;li</code>&gt; element a margin by default. The 1 pixel to the right leaves a tiny gap between the tabs. You can adjust this value to your liking.</p>
-<p>Last, but not least, we set the left padding to 10 pixels. This is an important value which depends on the tab image. It has to be at least as wide as the left part of the tab. Without the padding, the left part will be covered by the background image of the <code>&lt;a</code>&gt; element. </p>
-<p><img alt="" src="./img/03.png"></p>
-<p>Here we can see the background image appear for each list item however our list items are not in a row. They are floating left but we want them accross the top of the maincontent. We need to change the size of the navigation div so it is 100% of it's container.</p>
+<p>Do this now for all pages - as the <code>navigation</code> section appears everywhere.</p>
+<p>Again, before you go any further make sure your site is 'navigable' without any broken links. There should be no change in the appearence as yet.</p>
+<p>In your css flle, change the <code>navigation</code> rule to make that section the full width:</p>
 <pre><code>#navigation
 {  
   width: 100%;
@@ -261,69 +207,174 @@ ol#menu {
 }
 </code></pre>
 
-<p>Next we deal with the <code>&lt;a</code>&gt; element nested in the <code>&lt;li</code>&gt; element.</p>
-<pre><code>ol#menu a 
+<p>This will have the effect of making the navigation section pop up to the top of the page:</p>
+<p><img alt="" src="img/x02.png"></p>
+<p>In yoiur css file, introduce this rule at the very end:</p>
+<pre><code>ul#menu li 
 {
-    background: url(tabs.gif) 100% 0;
-    border: dashed thin;
+  display:inline; 
 }
-
 </code></pre>
 
-<p>For the background, we are using the same image as for the <code>&lt;li</code>&gt; element, with added position coordinates. 100% 0 means 100% to the right, no offset vertically. Since the <code>&lt;a</code>&gt; element is inside the <code>&lt;li</code>&gt; and thus on top of it, this background image will be drawn over the background image of the <code>&lt;li</code>&gt; element. So, the only visible part of the <code>&lt;li</code>&gt; element will be the 10 pixels of padding that we specified earlier on the left. This 10 pixel part can be seen to the left of the dashed border drawn around the <code>&lt;a</code>&gt; element. Together, these background images form a whole tab which can be anywhere from 20 to 490 pixels wide. This forms the two rounded ends of each tab. You can compare to the other four tabs that have no <code>&lt;a</code>&gt; elements (Curabitur, Integer, Suspendisse and Quisque) and thus have no rounded right hand corner.</p>
-<p><img alt="" src="./img/04.png"></p>
-<p>Next we deal with the colour of text, and the size of the <code>&lt;a</code>&gt; element by adding the following:</p>
-<pre><code>ol#menu a
-{
-    background: url(tabs.gif) 100% 0;
-    color: #008;
-    float: left;
-    line-height: 2em;
-    padding-right: 10px;
-    text-decoration: none;
-    border: dashed thin;
+<p><img alt="" src="img/x03.png"></p>
+<p>This is make the navigation section now appear all on one line:</p>
+<p>Refresh the page - can you see a difference? If you cant, delete the rule and refresh again until you can see the small change.</p>
+<p>One last change for this step - change <code>maincontent</code> to be the full width of the page:</p>
+<pre><code>#maincontent
+{  
+  width: 100%;  
+  float: right;
 }
-
 </code></pre>
 
-<p>We specify a dark blue color for the text inside the tab. Since the text is a link, we have to specify the color specifically for the <code>&lt;a</code>&gt; element, because otherwise the default color (usually clear blue) would overwrite it.</p>
-<p>The element should have display: block; because it should act as a block element, rather than an inline element (i.e. text.) This means that I can give it padding, margin, width, height and all that. However, since MSIE6 gives the element the wrong width, float: left; is used because it implies display: block; with the addition of making the element shrink to its smallest possible size (taking content and padding into account.) We don't have to worry about the element "floating" since it has no sibling elements.</p>
-<p>We give the element a line height because it's essentially the same as height (as long as the text stays on one line), with the difference that it is vertically centered.</p>
-<p>The padding to the right should be just as much as it was for the <code>&lt;li</code>&gt; element, so that the text will be centered. If you want more spacing to the left and/or right, you modify the left padding in the <code>&lt;li</code>&gt; element and the right padding in this one.</p>
-<p><img alt="" src="./img/05.png"></p>
+<p><img alt="" src="img/x04.png"></p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="04">
+    <h1>Establishing the Tab Bar</h1>
+<p>Next add the following rule to the home.css file:</p>
+<pre><code>ul#menu 
+{
+  margin: 0;
+  padding: 0;
+}
+</code></pre>
+
+<p>This has the effect of tightening the navigation section - and more closely aligning it with the left of the page. It will be useful as a basis for the next few adjustments (make sure you can see the difference).</p>
+<p><img alt="" src="img/x05.png"></p>
+<p>Lets revist the `ul#menu li" rule - extending it with three properties as shown here:</p>
+<pre><code>ul#menu li 
+{
+  display:inline; 
+  line-height: 2em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+</code></pre>
+
+<p>The page should now look like this:</p>
+<p><img alt="" src="img/x06.png"></p>
+<p>So, what's happening here? We are setting the height of the menu (which will be our bar of tabs) to 2 em units (which is twice the height of the letter 'm' in the current font) In most browsers, this is automatically calculated because all the list items (tabs) will be 2 em units in height.</p>
+<p>The padding left and right are both set to .5 to avoid any spacing inside and outside the list. </p>
+<p>Next we'll style the default state for each link item (tab) inside the menu:</p>
+<pre><code>ul#menu a
+{
+  text-decoration: none;
+}
+</code></pre>
+
+<p><img alt="" src="img/x07.png"></p>
+<p>This 'turns off' the underlining of links, which will make our tabs look more distinctive.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="05">
-    <h1>Selected Tab</h1>
-<p>Now we want to offset the image when the tab is selected so that the colour changes to the lower row of the image.</p>
-<p>To do this we target the list item that is in classified as current. (step 1)</p>
-<p>ol#menu li.current 
-{
-    background-color: #48f;
-    background-position: 0 -60px;
-}</p>
-<p>For the currently selected tab, we change the background color to something that fits the color of the active state of the tab. More importantly, we change the offset, or position, of the background image to move 60 pixels up. This is because one row in the tab image was 60 pixels high, and we want the second row, so we move the image up, revealing its lower part.</p>
-<p>Notice that we are not using the background shortcut here. That's because I only want to override some of the properties, and leave the background-image property as it was in the <code>&lt;li</code>&gt; rule.</p>
-<p><img alt="" src="./img/06.png"></p>
-<p>In the image above you can see the new blue colour behind the <code>&lt;a</code>&gt; element. Next we must set the image offset for the <code>&lt;a</code>&gt; element itself</p>
-<pre><code>ol#menu li.current a 
-{
-    background-position: 100% -60px;
-    color: #fff;
-    font-weight: bold;
+    <h1>Styling the Tab</h1>
+<p>Our page is navigable now, but the user has no real idea of what page they are visting. Then cannot even tell if the list long the top is in fact a navigation panel.</p>
+<p>We can do two things to fix this:</p>
+<h2>1: Border</h2>
+<p>Lets go back to <code>maincontent</code> rule - and adjust it as follows:</p>
+<pre><code>#maincontent
+{  
+  width: 100%;  
+  float: right;
+  padding: 2%;
+  border: blue solid 1px;
 }
 </code></pre>
 
-<p><img alt="" src="./img/07.png"></p>
-<p>We have done the same for the the <code>&lt;a</code>&gt; element except its the right side so the offset is -60px, we have also change the font to white and bold.</p>
-<p>Make sure each page has the correct id and class names for the navigation menu and remove from the list in the navigation div those list items we don't use. You also need to fix the main content so it fills the width of the body so the final version should look like this:</p>
-<p><img alt="" src="./img/08.png"></p>
+<p><img alt="" src="img/x08.png"></p>
+<p>As you can see, the content area is framed to give additional visual ques to the user</p>
+<h2>2: Acitve Tab</h2>
+<p>Now we are ready to <code>activate</code> the tabs. Introduce this rule:</p>
+<pre><code>#menu li.current a 
+{
+  background: blue;
+  padding: .5em 2em .5em 2em;
+  color:white;
+}
+</code></pre>
+
+<p>Our page will now have a pleasing tabbed effect:</p>
+<p><img alt="" src="img/x09.png"></p>
+<p>Your page should behave as follows:</p>
+<ul>
+<li><a href="archives/final/home.html">Final Version</a></li>
+</ul>
+<p>This is the final version of the CSS:</p>
+<pre><code>body
+{
+  width: 80%;  
+  margin: 0 auto;
+}
+
+#maincontent
+{  
+  width: 100%;  
+  float: right;
+  padding: 2%;
+  border: blue solid 1px;
+}
+
+#navigation
+{  
+  width: 100%;
+  float: left;  
+}
+
+#header
+{  
+  width: 100%;
+}
+
+#footer
+{  
+  width: 100%;
+  clear: both;
+}
+
+#primary
+{  
+  width: 68%;  
+  float: left;  
+}
+
+#secondary
+{  
+  width: 30%;  
+  float: right;
+}
+
+ul#menu 
+{
+  margin: 0;
+  padding: 0;
+}
+
+ul#menu li 
+{
+  display:inline; 
+  line-height: 2em;
+  padding-right: .5em;
+  padding-left: .5em;
+}
+
+ul#menu a
+{
+  text-decoration: none;
+}
+
+#menu li.current a 
+{
+  background: blue;
+  padding: .5em 2em .5em 2em;
+  color:white;
+}
+</code></pre>
   </div>
   <div  class="ui tab segment lab" data-tab="Exercises">
     <h2>Exercises</h2>
 <h2>Completed Lab</h2>
 <p>This is a complete archive of this lab if you are having difficulty:</p>
 <ul>
-<li><a href="./archives/lab05.zip">lab05.zip</a></li>
+<li><a href="./archives/final.zip">final.zip</a></li>
 </ul>
 <p>This is the completed app store lab:</p>
 <ul>
