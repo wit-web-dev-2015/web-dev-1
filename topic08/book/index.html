@@ -8,13 +8,13 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/solarized_light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/solarized_light.min.css" rel="stylesheet" />
 
      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.4/semantic.min.js"></script>
-     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/languages/java.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
       <style>
@@ -85,7 +85,7 @@ h3
   <header class="header item">
     <a href="../index.html">
       <i class="sitemap icon"></i>
-      Templates
+      Deployment
     </a>
   </header>
   <div class="right tab-menu menu">
@@ -110,9 +110,6 @@ h3
       <a class="item" data-tab="06">
         06
       </a>
-      <a class="item" data-tab="07">
-        07
-      </a>
       <a class="item" data-tab="Exercises">
         Exercises
       </a>
@@ -123,421 +120,362 @@ h3
 
   <div  class="ui tab segment lab" data-tab="Lab-08">
     <h1>Objectives</h1>
-<p>Explore a web site that embodies many of the techniques we have explored so far. In the lab the web is evolved from unstyled content to a reasonably elegant and clean design - using semantic html element where appropriate.</p>
+<p>Install software tools to serve a web site locally and also to deploy the web site to a public web server.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="01">
-    <h1>Setup</h1>
-<p>Download this archive here:</p>
-<ul>
-<li><a href="archives/iot-web-site-v01.zip">iot-web-site-v01.zip</a></li>
-</ul>
-<p>Unzip it somewhere suitable - and open the project in Sublime:</p>
-<p><img alt="" src="img/01.png"></p>
-<p>Explore the pages in detail - and note the range of images in the assets folder. Also notice that all of the files are inside the <code>public</code> folder of the project.</p>
-<p>Browse the pages in you web browser:</p>
-<ul>
-<li><a href="archives/iot-web-site-v01/public/index.html">iot-web-site-v01</a></li>
-</ul>
-<p>If you can, download and install:</p>
-<ul>
-<li><a href="https://www.mozilla.org/en-US/firefox/developer/">Firefox Developer Edition</a></li>
-</ul>
-<p>and open the site using it instead of chrome:</p>
-<p><img alt="" src="img/02.png"></p>
-<p>Explore the 'inspector' options:</p>
-<p><img alt="" src="img/03.png"></p>
-<p>and become familiar with some of the tools. The <code>Style Editor</code> is particularly interesting:</p>
-<p><img alt="" src="img/04.png"></p>
-<p>Note that it is currently showing an error for our site - we are linking to <code>style.css</code> in the head, but we haven't provided a css file yet.</p>
-<h3>Project so far...</h3>
-<ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v01/public/index.html">iot-web-site-v01</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V01">https://github.com/wit-computing/iot-web/releases/tag/V01</a></li>
-</ul>
+    <h1>Command Prompt</h1>
+<p>Open a command prompt on Windows. The easiest way to do this is in Windows 7 to type 'cmd' in the Search Box on the Windows start menu:</p>
+<p><img alt="" src="img/14.png"></p>
+<p>When you type it, the start menu might change to the following:</p>
+<p><img alt="" src="img/15.png"></p>
+<p>...and if you press return, then the command window itself will appear:</p>
+<p><img alt="" src="img/16.png"></p>
+<p>On Windows 8 and 10, access the desktop from the home screen, and run File Explorer (may be in the toolbar). Then select File-&gt;Open Command Prompt:</p>
+<p><img alt="" src="img/01a.png"></p>
   </div>
   <div  class="ui tab segment lab" data-tab="02">
-    <h1>style.css</h1>
-<p>Create a new stylesheet in the public folder:</p>
-<h2>style.css</h2>
-<pre><code>body {
-  max-width: 80%;
-  margin: 0 auto;
-}
-</code></pre>
-
-<p>Because the links are already in all the files, the margins should immediately be reset for the full site.</p>
-<p>In Firefox Developer Edition, you can use the <code>style editor</code> to dynamically change the css in order to see different effects:</p>
-<p><img alt="" src="img/05.png"></p>
-<p>Try adjusting the margin width and you will see the canvas changes immediately.</p>
-<p>Now append these rules to the stylesheet:</p>
-<pre><code>.header-crest-img {
-  float: right;
-  margin: 1em;
-}
-
-.footer-social-links {
-  text-align: center
-}
-</code></pre>
-
-<p>These are to better position the header crest and also the social media links at the foot of the page. They will only work if we give these elements the appropriate classes:</p>
-<pre><code>  &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;
-</code></pre>
-
-<pre><code>&lt;hr&gt;
-&lt;p class=&quot;footer-social-links&quot;&gt;
-  &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
-  &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
-  &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
-&lt;/p&gt;
-</code></pre>
-
-<p>Continue to experiment with the style editor to try out different options</p>
-<p><img alt="" src="img/06.png"></p>
-<h3>Project so far...</h3>
+    <h1>Command Line</h1>
+<p>This is an alternative interface to Windows which it is important to become familiar with. In this window you can type what are sometimes called 'DOS' commands. These commands let you have a finer level of control of your PC, and are particularly important for programmers to master.</p>
+<p>Here are some simple commands:</p>
 <ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v02/public/index.html">iot-web-site-v02</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V02">https://github.com/wit-computing/iot-web/releases/tag/V02</a></li>
+<li>dir<ul>
+<li>list all files in a directory</li>
 </ul>
+</li>
+<li>cd ..<ul>
+<li>change to a parent directory</li>
+</ul>
+</li>
+<li>cd \<directory name><ul>
+<li>change to a specific directory</li>
+</ul>
+</li>
+</ul>
+<p>It is essential that you become adept at these commands, and a few others.</p>
+<p>Bear in mind that these commands always have a 'current directory' in mind (a directory is another name for a folder). Try them now and see if you can 'navigate' to your web development workspace. For instance, if the folder is located as shown here:</p>
+<p><img alt="" src="img/17.png"></p>
+<p>Then the commands to get there will look like this:</p>
+<p><img alt="" src="img/18.png"></p>
+<p>If your workspace is located on another drive, the enter that drive letter first - say "G:", press return, and then try the cd and dir commands.</p>
+<p><img alt="" src="img/19.png"></p>
+<p>Note in all of the above that the 'prompt' in the command window is always showing the 'current' drive/directory.</p>
+<p>Also, if you have a 'space' in your directory (a bad idea generally), then you will have to use quotation marks in the commands. Here is an example:</p>
+<p><img alt="" src="img/20.png"></p>
+<p>See in the above transcript that the directory name is "Web Development Workspace" - and it has been enclosed in double quotes.</p>
+<p>In general, however, it is best to adopt the following conventions.</p>
+<ul>
+<li>
+<p>Never use spaces in directory or file names</p>
+</li>
+<li>
+<p>Never use upper case in directory or file names</p>
+</li>
+<li>
+<p>If you wish to use readable multiple words for a directory or file name, separate the words with '-'. e.g.</p>
+<ul>
+<li>web-development</li>
+<li>java-projects</li>
+</ul>
+</li>
+</ul>
+<p>Perhaps you might take this opportunity to adjust your workspace and projects to adopt the above conventions. If you do, then you will find that using DOS commands to navigate your folders will be considerably easier.</p>
+<p>Before going on to the next step, make sure you are comfortable navigating in DOS around the file system, and in particular make sure you can navigate to your web development workspace.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="03">
-    <h1>Header + Footer</h1>
-<p>The changes you just introduced will need to be carried out on all the <code>strand</code> pages:</p>
-<pre><code>  &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;
-</code></pre>
-
-<pre><code>&lt;hr&gt;
-&lt;p class=&quot;footer-social-links&quot;&gt;
-  &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
-  &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
-  &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
-&lt;/p&gt;
-</code></pre>
-
-<p>Do this now.</p>
-<hr>
-
-<h3>Project so far...</h3>
+    <h1>Serving - IT Labs</h1>
+<p>To date you have been opening the web pages you have designed by locating them on your PC and opening the browser directly. This is adequate for simple pages, but does not accurately reproduce how the page/site will be browsed when it is deployed on the public Internet.</p>
+<p>To reproduce this experience, we will need to install a <code>web server</code> on our workstations, start this server and have it make our site available in a simulated network. Some server tools can also help simplify the work flow of deploying our site to a public server so that it is accessible globally. We will attempt both in this lab.</p>
+<p>This step will cover serving a site using:</p>
 <ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v03/public/index.html">iot-web-site-v03</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V03">https://github.com/wit-computing/iot-web/releases/tag/V03</a></li>
+<li>the PCs in the IT Labs</li>
+<li>your own PC, if it is running windows</li>
 </ul>
+<p>If you have a mac or a windows PC, the next step covers an alternative, complimentary method. However, even if you have your own laptop/mac with you - do this step first on the machines in the IT lab, as the tools require a reliable Internet connection.</p>
+<p>Onto your root of your G: drive, download this archive here </p>
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/2068306/node.zip">node.zip</a></li>
+</ul>
+<p>Unzip the archive to the root of G: drive. Make double sure the folder is in the root of G: drive.</p>
+<p>Open a Command Prompt (see last step) and set G: do be your default drive:</p>
+<pre><code>C:\MyDocuments&gt; G:
+G:\&gt;
+</code></pre>
+
+<p>Then type the following command:</p>
+<pre><code>G:\&gt; \node\init
+
+</code></pre>
+
+<p>Now type the following (first line only):</p>
+<pre><code>G:\&gt; harp init demo
+Downloading boilerplate: https://github.com/harp-boilerplates/default
+Initialized project at /Users/edeleastar/repos/modules/web/bsc-2015/prj/demo
+</code></pre>
+
+<p>Then enter (first line only again):</p>
+<pre><code>G:\&gt; cd demo
+G:\demo&gt; harp server
+------------
+Harp v0.19.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+</code></pre>
+
+<p>Now browse to this url here:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>and you should see this page:</p>
+<p><img alt="" src="img/21.png"></p>
+<p>To stop 'serving' the page, enter Ctrl-C in the command prompt:</p>
+<pre><code>G:\demo&gt; harp server
+Harp v0.19.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+^C
+Terminate batch job (Y/N)? y
+G:\&gt;
+</code></pre>
   </div>
   <div  class="ui tab segment lab" data-tab="04">
-    <h1>Image Sizing</h1>
-<p>The images throughout the site are rendered without any size adjustments. Many are outsize and do not give an optimal user experience.</p>
-<p>One simple strategy to address this diversity of image sizes could be to introduce a series of rules to establish a preferred height for each image. We have a number of image types - which we target in these rules:</p>
-<pre><code>.footer-img {
-  height: 90px;
-}
-
-.strand-right-img {
-  float: right;
-  margin: 1em;
-  height: 350px;
-}
-
-.strand-left-img {
-  float: left;
-  margin: 1em;
-  height: 350px;
-}
-
-.strand-timeline-img {
-  height: 80px;
-}
-
-.strand-modules-img {
-  height: 75px;
-}
-
-.strand-modules-double-img {
-  height: 150px;
-}
-
-.strand-modules-treble-img {
-  height: 310px;
-}
-</code></pre>
-
-<p>The first rule is targeting the images at the end of the index page:</p>
-<pre><code>&lt;h4&gt; Supported by leading edge research at... &lt;/h4&gt;
-&lt;p&gt;
-  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/tssg.png&quot; alt=&quot;TSSG&quot;&gt;
-  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/ctrg.png&quot; alt=&quot;CTRG&quot;&gt;
-  &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/automotive.png&quot; alt=&quot;ATG&quot;&gt;
-&lt;/p&gt;
-</code></pre>
-
-<p>Test this now - and these 'sponsor' images show appear more uniform.</p>
-<p>The remaining rules are associated with each of the strand pages -<code>project.html</code> for instance:</p>
-<pre><code>
-&lt;h1&gt; Project &lt;/h1&gt;
-&lt;p&gt;
-  &lt;img class=&quot;strand-right-img&quot; src=&quot;../assets/images/iot/project/project-1.png&quot;&gt;
-  The programme will promote an ethos of collaboration, practical application, and innovation. A project module will be included at each stage of the programme (apart from semester 1) that, through individual and collaborative projects, will challenge students to combine the knowledge and skills acquired in the various strands. Each project module will also elaborate on a theme, orthogonal to the programme disciplines, but central to the student’s individual development.
-&lt;/p&gt;
-
-&lt;p&gt;
-  &lt;img class=&quot;strand-timeline-img&quot; src=&quot;../assets/images/iot/timeline.png&quot;&gt;
-  &lt;img class=&quot;strand-modules-double-img&quot; src=&quot;../assets/images/iot/project/project-modules.png&quot;&gt;
-&lt;/p&gt;
-
-&lt;h2&gt; Project Learning Path &lt;/h2&gt;
-&lt;p&gt;
-  &lt;img class=&quot;strand-left-img&quot; src=&quot;../assets/images/iot/project/project-2.jpeg&quot;&gt;  The project will be assessed via a single report and presentation each semester. The report will demonstrate an artefact of the student’s choosing that integrates knowledge from two or more strands. This may be in the form of a software application, software/hardware combination, paper or combination of all of these. The ‘Orthogonal’ dimension must be addressed in the context of this report/presentation. The tuition team across each of the strands will stimulate project ideas and concepts for consideration by the students, who may take on board specific suggestions. Students as expected to proceed with ideas and concepts that particularly interest them individually, or collectively, in small teams.
-&lt;/p&gt;
-</code></pre>
-
-<p>Note carefully the classes associated with each of the images here - and make these changes to all of the strand pages.</p>
-<p>The <code>strand-modules..</code> rules are for varying the height modules images, depending on whether there are 1, 2 or 3 rows of modules in the images.</p>
-<p>Make all these adjustments now so that the images appear more or less uniformly.</p>
-<h3>Project so far...</h3>
+    <h1>Serving - Personal PCs</h1>
+<h2>Windows PC</h2>
+<p>If you have your own PC - then the last step should also work. You may not have a G: drive, so use the C: drive but follow the same commands as in the last step.</p>
+<h2>Mac</h2>
+<p>If you have a Mac - then you need to do the following:</p>
+<p>Install Node on MAC:</p>
 <ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v04/public/index.html">iot-web-site-v04</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V04">https://github.com/wit-computing/iot-web/releases/tag/V04</a></li>
+<li><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></li>
 </ul>
+<p>Install harp.js</p>
+<ul>
+<li><a href="http://harpjs.com/">http://harpjs.com/</a></li>
+</ul>
+<p>The procedure for both of the above should be relatively straightforward.</p>
+<p>Once these tools are installed, then from a terminal you should be able to :</p>
+<pre><code>$ harp init demo
+Downloading boilerplate: https://github.com/harp-boilerplates/default
+Initialized project at /Users/edeleastar/repos/modules/web/bsc-2015/prj/demo
+$ cd demo
+$ harp server
+Harp v0.19.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+</code></pre>
+
+<p>Now browse to this url here:</p>
+<ul>
+<li><a href="http://localhost:9000">http://localhost:9000</a></li>
+</ul>
+<p>and you should see this page:</p>
+<p><img alt="" src="img/21.png"></p>
+<p>To stop 'serving' the page, enter Ctrl-C in the command prompt:</p>
+<pre><code>G:\demo&gt; harp server
+Harp v0.19.0 – Chloi Inc. 2012–2015
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+------------
+^C
+$ 
+</code></pre>
+
+<h1>Surge on a Mac</h1>
+<p>With node and harp installed - you will need to install:</p>
+<ul>
+<li><a href="https://surge.sh/">https://surge.sh/</a></li>
+</ul>
+<p>The simplest way to do this is to open a terminal and enter:</p>
+<pre><code>sudo npm install --global surge
+</code></pre>
+
+<p>If successful, the terminal will look something like this:</p>
+<pre><code>/usr/local/bin/surge -&gt; /usr/local/lib/node_modules/surge/lib/cli.js
+surge@0.17.0 /usr/local/lib/node_modules/surge
+├── url-parse-as-address@1.0.0
+├── surge-ignore@0.2.0
+├── is-domain@0.0.1
+├── netrc@0.1.4
+├── progress@1.1.8
+├── moniker@0.1.2
+├── minimist@1.1.1
+├── read@1.0.5 (mute-stream@0.0.5)
+├── split@0.3.1 (through@2.3.8)
+├── du@0.1.0 (async@0.1.22)
+├── fstream-ignore@1.0.2 (inherits@2.0.1, minimatch@2.0.10, fstream@1.0.8)
+├── tar@1.0.0 (inherits@2.0.1, block-stream@0.0.8, fstream@1.0.8)
+├── tar.gz@0.1.1 (commander@1.1.1, tar@0.1.20, fstream@0.1.31)
+├── request@2.40.0 (aws-sign2@0.5.0, forever-agent@0.5.2, tunnel-agent@0.4.1, oauth-sign@0.3.0, stringstream@0.0.5, json-stringify-safe@5.0.1, qs@1.0.2, node-uuid@1.4.3, mime-types@1.0.2, tough-cookie@2.2.0, form-data@0.1.4, http-signature@0.10.1, hawk@1.1.1)
+└── prompt@0.2.14 (revalidator@0.1.8, pkginfo@0.3.1, utile@0.2.1, winston@0.8.3)
+</code></pre>
   </div>
   <div  class="ui tab segment lab" data-tab="05">
-    <h1>Revised Index Layout</h1>
-<p>The home pages can be enhanced somewhat - perhaps improving the use of images on the page and also incorporating a simple multi-column structure.</p>
-<p>Here are the rules:</p>
-<pre><code>.banner {
-  background: url(&quot;assets/images/banner.jpg&quot;) top center;
-  background-position: top center;
-  height:350px;
-}
+    <h1>Deploying a Web Site using Surge</h1>
+<p>Create a new project com the command line by entering the following:</p>
+<pre><code>harp init iot-web
+</code></pre>
 
-#summary
-{
-  width: 40%;
-  float: left;
-  color: white;
-  background : rgba(58,84,90, 0.5);
-  margin : 1em;
-  padding : 1em;
-  clear:both;
-}
+<p>Remember, make sure to keep an eye on which folder this command is executed from. Opening the folder should reveal these files:</p>
+<p><img alt="" src="img/22.png"></p>
+<p>We will use files like these later - but for the moment delete all of these files and replace them with the following file called <code>harp.json</code>:</p>
+<h2>harp.json</h2>
+<pre><code>{
+  &quot;globals&quot;: 
+  {
 
-#curriculum
-{
-  width: 100%;
-  margin: .5em;
-  padding: .5em;
-  clear: both;
-}
-
-#col1 {
-  float: left;
-  width: 48%
-}
-
-#col2 {
-  float: right;
-  width: 48%
-}
-
-#sponsors
-{
-  width: 100%;
-  clear: both;
-}
-
-#footer
-{
-  width: 100%;
-  clear: both;
+  }
 }
 </code></pre>
 
-<p>Some of these rules are familiar from earlier layout labs.</p>
-<p>To align <code>index.html</code> with these rules we need to make some adjustments to the structure of the page. In particular we need to wrap various sections in <code>&lt;div&gt;</code> elements, so that their properties can be targeted in interesting ways.</p>
-<p>Here is the complete <code>&lt;body&gt;</code> element - which you can replace in <code>index.html</code>:</p>
-<pre><code>&lt;div id=&quot;header&quot;&gt;
-  &lt;h2&gt;
-    &lt;img class=&quot;header-crest-img&quot; src=&quot;assets/images/wit-crest.png&quot; alt=&quot;WIT Crest&quot;&gt;
-    Department of Computing &amp;amp; Mathematics
-  &lt;/h2&gt;
-
-  &lt;h3&gt; BSc (Hons) the Internet of Things &lt;/h3&gt;
-  &lt;hr&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;banner&quot;&gt;
-  &lt;div id=&quot;summary&quot;&gt;
-    &lt;p&gt;
-      BACHELOR OF SCIENCE (HONOURS)
-    &lt;/p&gt;
-
-    &lt;h3&gt;
-      APPLIED COMPUTING IN THE INTERNET OF THINGS
-    &lt;/h3&gt;
-
-    &lt;h3&gt;
-      Program your World!
-    &lt;/h3&gt;
-    &lt;p&gt;
-      An exciting new level 8 Honours Degree for 2015. Combine Programming and Electronics and learn how to code cool devices, places and things. Be part of the next wave of innovation in Computing
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;curriculum&quot;&gt;
-  &lt;hr&gt;
-  &lt;div id=&quot;col1&quot;&gt;
-    &lt;h2&gt;&lt;a href=&quot;strands/programming.html&quot;&gt; Programming &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      Learn a broad range of programming and problem solving skills, including exciting new platforms, software tools and languages. Use these skills to build apps for mobile, cloud and device based IoT applications. Evolve a porfolio of facinating aplications.
-    &lt;/p&gt;
-
-    &lt;h2&gt;&lt;a href=&quot;strands/data.html&quot;&gt; Data Science &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      At the heart of many IoT applications is data: measurements, events alarms and other information that must be relayed, stored and ultimately turned into knowledge. Learn the fundamentals of modern approaches to data in this strand.
-    &lt;/p&gt;
-    &lt;h2&gt;&lt;a href=&quot;strands/devices.html&quot;&gt; Devices &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      The 'Things' we connect to are often physical devices. These can range from simple temperature sensors to sophisticated control systems like traffic lights or cameras. Connecting to and interacting with the physical world is the subject of this strand.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;col2&quot;&gt;
-    &lt;h2&gt;&lt;a href=&quot;strands/networks.html&quot;&gt; Networks &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      This strand will explore modern networks and cloud technology. Be able to configure, network and manage all categories of computer systems from simple controlers to single board board computers, mobiles and full workstations.
-    &lt;/p&gt;
-    &lt;h2&gt;&lt;a href=&quot;strands/project.html&quot;&gt; Project &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      Building exciting IoT projects in every semester of the programme. Your projects will combine skills acquired from the other strands and enable you to build a comprehensive an compelling portfolio of IoT applications and services.
-    &lt;/p&gt;
-
-    &lt;h2&gt;&lt;a href=&quot;strands/maths.html&quot;&gt; Mathematics &lt;/a&gt;&lt;/h2&gt;
-    &lt;p&gt;
-      Introduce foundation concepts for many of the more applied concepts in the other Strands. Learn mathematical techniques in a modern context and apply core principles in new an interesting ways.
-    &lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;sponsors&quot;&gt;
-  &lt;hr&gt;
-  &lt;h4&gt; Supported by leading edge research at... &lt;/h4&gt;
-  &lt;p&gt;
-    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/tssg.png&quot; alt=&quot;TSSG&quot;&gt;
-    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/ctrg.png&quot; alt=&quot;CTRG&quot;&gt;
-    &lt;img class=&quot;footer-img&quot; src=&quot;assets/images/automotive.png&quot; alt=&quot;ATG&quot;&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div id=&quot;footer&quot;&gt;
-  &lt;hr&gt;
-  &lt;p class=&quot;footer-social-links&quot;&gt;
-    &lt;a href=&quot;http://www.facebook.com/witcomp&quot;&gt; facebook &lt;/a&gt;
-    &lt;a href=&quot;http://twitter.com/ComputingAtWIT&quot;&gt; twitter &lt;/a&gt;
-    &lt;a href=&quot;https://ie.linkedin.com/pub/computing-at-wit/a9/221/1b6&quot;&gt; linkedin &lt;/a&gt;
-  &lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p>Notice we are using a background image for the <code>banner</code> section </p>
-<pre><code>.banner {
-  background: url(&quot;assets/images/banner.jpg&quot;) top center;
-  background-position: top center;
-  height:350px;
-}
-</code></pre>
-
-<p>... and the summary section has an opacity of 0.5 set for its background:</p>
-<pre><code>#summary
-{
-  width: 40%;
-  float: left;
-  color: white;
-  background : rgba(58,84,90, 0.5);
-  margin : 1em;
-  padding : 1em;
-  clear:both;
-}
-</code></pre>
-
-<p>This serves to enhance the readability of the panel. In Firefox Style Editor you can dynamically change this value and immediately observe the effect:</p>
-<p><img alt="" src="img/07.png"></p>
-<p>Otherwise the page is styled using simple percentage widths and floats.</p>
-<h3>Project so far...</h3>
+<p>If you havent already downloaded it - get the last version of the IoT web site from the last lab:</p>
 <ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v05/public/index.html">iot-web-site-v05</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V05">https://github.com/wit-computing/iot-web/releases/tag/V05</a></li>
-</ul>
-  </div>
-  <div  class="ui tab segment lab" data-tab="06">
-    <h1>Open Sans</h1>
-<p>The default font is adequate - but perhaps not particularly elegant or readable. We can expect the browser to support a range of fonts - summarised here:</p>
-<ul>
-<li><a href="http://www.cssfontstack.com/">http://www.cssfontstack.com/</a></li>
-</ul>
-<p>Selecting any one of these fonts will take you to a page showing you the exact CSS you would need to include.</p>
-<p>It is also possible to download fonts dynamically over the web - some of these are cataloged here:</p>
-<ul>
-<li><a href="http://www.cssfontstack.com/Web-Fonts">http://www.cssfontstack.com/Web-Fonts</a></li>
-</ul>
-<p>This is a popular and pleasing one:</p>
-<ul>
-<li><a href="http://www.cssfontstack.com/Open-Sans">http://www.cssfontstack.com/Open-Sans</a></li>
-</ul>
-<p>This one is used in WIT Moodle.</p>
-<p>To use it, we much first make sure our <code>&lt;head&gt;</code> section includes this element:</p>
-<pre><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//fonts.googleapis.com/css?family=Open+Sans&quot; /&gt;
-</code></pre>
-
-<p>The above will need to be includes in all the pages of our site (including all the strand pages).</p>
-<p>Then we can select the font for all our pages by adjusting our <code>body</code> rule in the style sheet:</p>
-<pre><code>body {
-  max-width: 80%;
-  margin: 0 auto;
-  font-family: 'Open Sans';
-}
-</code></pre>
-
-<p>Make these changes now to switch over completely to Open Sans.  Read about the background to the font here:</p>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Open_Sans">https://en.wikipedia.org/wiki/Open_Sans</a></li>
-</ul>
-<h3>Project so far...</h3>
-<ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v06/public/index.html">iot-web-site-v06</a></li>
-<li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V06">https://github.com/wit-computing/iot-web/releases/tag/V06</a></li>
-</ul>
-  </div>
-  <div  class="ui tab segment lab" data-tab="07">
-    <h1>Semantic HTML</h1>
-<p>The completed site has a reasonable user experience, but the <code>Developer Experience</code> leaves something to be desired. In particular, we are overusing <code>&lt;div&gt;</code> elements, when suitable Semantic Elements are available:</p>
-<ul>
-<li><a href="http://diveinto.html5doctor.com/semantics.html#new-elements">http://diveinto.html5doctor.com/semantics.html#new-elements</a></li>
-</ul>
-<p>The specific elements we will use here are:</p>
-<ul>
-<li><code>&lt;section&gt;</code></li>
-<li><code>&lt;article&gt;</code></li>
-<li><code>&lt;figure&gt;</code></li>
-<li><code>&lt;aside&gt;</code></li>
-<li><code>&lt;header&gt;</code></li>
-<li><code>&lt;footer&gt;</code></li>
-</ul>
-<p>This is the <code>current</code> layout of the index page:</p>
-<p><img alt="" src="img/09.png"></p>
-<p>(nested elements shown in collapsed form)</p>
-<p>Rework the index page to use the semantic elements instead of <code>&lt;div&gt;</code>s like this:</p>
-<p><img alt="" src="img/10.png"></p>
-<p>Make these changes now - there should be no change in the user experience.</p>
-<p>For each of the strand pages, here is what we would like to end up with:</p>
-<p><img alt="" src="img/11.png"></p>
-<p>(folded content again).</p>
-<p>Adjust all the strand pages to adopt the above structure.</p>
-<h3>Project so far...</h3>
-<ul>
-<li>Browse Web Site: <a href="archives/iot-web-site-v07/public/index.html">iot-web-site-v07</a></li>
 <li>Download Archive: <a href="https://github.com/wit-computing/iot-web/releases/tag/V07">https://github.com/wit-computing/iot-web/releases/tag/V07</a></li>
 </ul>
+<p>Unzip the project, and copy the <code>public</code> folder into the iot-web folder you have just created. Your <code>iot-web</code> folder should look like this:</p>
+<p><img alt="" src="img/23.png"></p>
+<p>Now we will <code>serve</code> the web site locally with this command:</p>
+<pre><code>G:&gt; cd iot-web
+G:\iot-web&gt; harp server
+Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+</code></pre>
+
+<p>Notice that the command is executed form within the <code>iot-web</code> directory.</p>
+<p>Verify that the site is available here:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+<p>Terminate the server again with ^C:</p>
+<pre><code>Your server is listening at http://localhost:9000/
+Press Ctl+C to stop the server
+Terminate batch job (Y/N)? y
+^C
+G:\iot-web&gt;
+</code></pre>
+
+<p>From still within the <code>iot-folder</code>, enter the following command:</p>
+<pre><code>G:\iot-web&gt; surge
+    Welcome to Surge!
+    Please login or create an account by entering your email and password:
+</code></pre>
+
+<p>Enter credential to create a new account now - be sure to remember the password. Surge will then deploy the site to a public server:</p>
+<pre><code>  project path: G:\dev\iot-web\
+               size: 34 files, 2.3 MB
+             domain: dull-pet.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: youremail@domain.com
+         IP address: 192.241.214.148
+
+    Success! Project is published and running at dull-pet.surge.sh
+</code></pre>
+
+<p>The <code>domain</code> can be customised -in the above example 'dull-pet' was generated, you can replace this with something more suitable (but unique, so perhaps include your initials, the current date or something that may not be used by someone else).</p>
+<p>Open a browser to inspect the running site. This is now deployed and accessible globally!</p>
+  </div>
+  <div  class="ui tab segment lab" data-tab="06">
+    <h1>Removing Web Sites from Surge</h1>
+<p>If you have published a number of sites you may want to recall what domains were generated, or perhaps remove some or all of the published pages.</p>
+<p>The various commands are listed here:</p>
+<ul>
+<li>https://surge.sh/help&gt;</li>
+</ul>
+<p>To list all web sites:</p>
+<pre><code>G:\dev\iot-web&gt;surge list
+              email: youremail@domain.com
+              token: *****************
+
+      iot-1.surge.sh
+      dull-pet.surge.sh
+      highfalutin-exchange.surge.sh
+
+
+G:\dev\iot-web&gt;
+</code></pre>
+
+<p>To remove (delete) a site from the server use the <code>teardown</code> command:</p>
+<pre><code>C:\dev\iot-web&gt;surge teardown highfalutin-exchange.surge.sh
+              email: youremail@domain.com
+              token: *****************
+             domain: highfalutin-exchange.surge.sh
+
+    Success - highfalutin-exchange.surge.sh has been removed.
+
+
+C:\dev\iot-web&gt;
+</code></pre>
   </div>
   <div  class="ui tab segment lab" data-tab="Exercises">
-    <h1>Solution</h1>
+    <h1>Exercises</h1>
+<p>See if you can deploy your assignment 1 project using surge.</p>
+<p>Here are the steps:</p>
+<ol>
+<li>
+<p>Make sure you have the node+harp+surge packages installed on your computer. For the Mac, see step 04. For Windows, see step 03.</p>
+</li>
+<li>
+<p>Create a new (empty) folder to contain your project. Into this folder place the following file:</p>
+</li>
+</ol>
+<h2>harp.json</h2>
+<pre><code>{
+  &quot;globals&quot;: 
+  {
+
+  }
+}
+</code></pre>
+
+<ol>
+<li>
+<p>Place your entire project into a folder called <code>public</code> inside this project folder (as we did in step 06).</p>
+</li>
+<li>
+<p>From the command line, enter the command:</p>
+</li>
+</ol>
+<pre><code>harp server
+</code></pre>
+
+<ol>
+<li>
+<p>Verify that your side it available on:</p>
+<ul>
+<li><a href="http://localhost:9000/">http://localhost:9000/</a></li>
+</ul>
+</li>
+<li>
+<p>Terminate the server with ^C, and then enter:</p>
+</li>
+</ol>
+<pre><code>surge
+</code></pre>
+
+<p>This will deploy the web site:</p>
+<pre><code>  project path: G:\dev\iot-web\
+               size: 34 files, 2.3 MB
+             domain: XXX.surge.sh
+             upload: [====================] 100%, eta: 0.0s
+   propagate on CDN: [====================] 100%
+               plan: Free
+              users: youremail@domain.com
+         IP address: 192.241.214.148
+
+    Success! Project is published and running at XXX.surge.sh
+</code></pre>
+
+<ol>
+<li>
+<p>Verify that the site is available on the domain. You will have the opportunity to change the domain <code>XXX</code></p>
+</li>
+<li>
+<p>Exchange project URLs with your friends!</p>
+</li>
+</ol>
   </div>
 <script>
 $('.ui.menu .item')
