@@ -1,3 +1,3 @@
-Case Study
+Deployment
 
-A review of the web site presented in lab-07-a. This lab encapsulates many of the practices we have encountered so far.
+Deploying a site involves understanding a little more about Clients & Servers, Hosting Providers, Domain Names, Transferring the Sites Files, HTTP and Absolute & Relative Paths
