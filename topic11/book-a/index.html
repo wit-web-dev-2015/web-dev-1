@@ -611,7 +611,53 @@ h3
 <p>This demonstrates a major benefit of using shared layouts - incremental improvements in the layout are immediately available on all dependent pages.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="10">
-    
+    <h1>Loading Semantic-UI</h1>
+<p>Currently, we have downloaded a copy of the Semantic-UI framework and stored it on our <code>assets</code> folder:</p>
+<pre><code>iot-web-ejs
+├── harp.json
+└── public
+    ├── assets
+    │   ├── css
+    │   │   ├── semantic.css
+    │   │   └── themes
+    │   │       ├── basic
+    │   │       ├── default
+    │   │       └── github
+    │   └── images
+    │      ...    
+</code></pre>
+
+<p>There is a easier way to include the library - and also to include the complete version (we only have a subset above). This is to link to an online version of the framework stored in a <code>Content Delivery Network</code>.</p>
+<ul>
+<li><a href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></li>
+</ul>
+<p>These are services that replicate many common libraries - often storing them in various locations around the world. This means they will load quite quickly.</p>
+<p>First, delete the associated <code>css</code> folder, and all files inside the css folder, from <code>assets</code> folder:</p>
+<pre><code>iot-web-ejs
+├── harp.json
+└── public
+    ├── assets
+    │   ├── css
+    │   │   ├── semantic.css
+    │   │   └── themes
+    │   │       ├── basic
+    │   │       ├── default
+    │   │       └── github
+    │   └── images
+    │      ...    
+</code></pre>
+
+<p>Secondly, remove this entry from the <code>index.ejs</code> and <code>_layout.ejs</code>:</p>
+<pre><code>  &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/semantic.css&quot;&gt;
+</code></pre>
+
+<p>... and replace with the following:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.css&quot; type=&quot;text/css&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.6/semantic.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Verify that the site works as before.</p>
   </div>
   <div  class="ui tab segment lab" data-tab="Exercises">
     <h1>Solution</h1>
